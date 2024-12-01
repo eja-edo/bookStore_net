@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            createOrder1 = new Views.UserControls.CreateOrder();
+            eplManagement1 = new Views.Forms.eplManagement();
             SuspendLayout();
             // 
-            // createOrder1
+            // eplManagement1
             // 
-            createOrder1.Dock = DockStyle.Fill;
-            createOrder1.Location = new Point(0, 0);
-            createOrder1.Name = "createOrder1";
-            createOrder1.Size = new Size(842, 450);
-            createOrder1.TabIndex = 0;
+            eplManagement1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            eplManagement1.Location = new Point(0, 1);
+            eplManagement1.Name = "eplManagement1";
+            eplManagement1.Size = new Size(886, 572);
+            eplManagement1.TabIndex = 0;
             // 
             // TestForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            ClientSize = new Size(842, 450);
-            Controls.Add(createOrder1);
+            ClientSize = new Size(886, 574);
+            Controls.Add(eplManagement1);
             Name = "TestForm";
             Text = "TestForm";
             Load += TestForm_Load;
@@ -54,6 +54,6 @@
 
         #endregion
 
-        private Views.UserControls.CreateOrder createOrder1;
+        private Views.Forms.eplManagement eplManagement1;
     }
 }

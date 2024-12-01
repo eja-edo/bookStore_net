@@ -33,6 +33,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            label6 = new Label();
+            label5 = new Label();
             button1 = new Button();
             label4 = new Label();
             label3 = new Label();
@@ -46,6 +48,8 @@
             // guna2Panel1
             // 
             guna2Panel1.BorderRadius = 12;
+            guna2Panel1.Controls.Add(label6);
+            guna2Panel1.Controls.Add(label5);
             guna2Panel1.Controls.Add(button1);
             guna2Panel1.Controls.Add(label4);
             guna2Panel1.Controls.Add(label3);
@@ -60,6 +64,28 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Panel1.Size = new Size(553, 85);
             guna2Panel1.TabIndex = 0;
+            // 
+            // label6
+            // 
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label6.AutoSize = true;
+            label6.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            label6.Location = new Point(369, 9);
+            label6.Name = "label6";
+            label6.Size = new Size(74, 16);
+            label6.TabIndex = 8;
+            label6.Text = "Tổng cộng";
+            // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label5.AutoSize = true;
+            label5.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            label5.Location = new Point(251, 9);
+            label5.Name = "label5";
+            label5.Size = new Size(57, 16);
+            label5.TabIndex = 7;
+            label5.Text = "Đơn giá";
             // 
             // button1
             // 
@@ -154,5 +180,9 @@
         private Label label4;
         private Label label3;
         private Button button1;
+        private Label label6;
+        private Label label5;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
     }
 }

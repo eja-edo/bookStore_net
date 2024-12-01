@@ -3,60 +3,52 @@
   "WorkspaceRootPath": "E:\\projcetAppC#\\BookStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|E:\\projcetAppC#\\BookStore\\views\\usercontrols\\updateproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\usercontrols\\updateproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\controllers\\infoemployeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:controllers\\infoemployeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\usercontrols\\createorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\usercontrols\\createorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\forms\\forminfoemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\forminfoemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\test\\testform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\forms\\forminfoemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\forminfoemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\models\\data\\detailempdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:models\\data\\detailempdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\models\\modelviews\\detailproductview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:models\\modelviews\\detailproductview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\forms\\eplmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\eplmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\forms\\eplmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\eplmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\utilities\\securepasswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:utilities\\securepasswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|E:\\projcetAppC#\\BookStore\\test\\testform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:test\\testform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\usercontrols\\createorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\usercontrols\\createorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\forms\\infoemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\infoemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\forms\\createrstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\createrstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\models\\modelviews\\infoemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:models\\modelviews\\infoemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\forms\\listrestock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\listrestock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\forms\\createorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\createorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\forms\\createrstock.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\createrstock.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\usercontrols\\itemproductorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\usercontrols\\itemproductorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\forms\\listorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\listorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\forms\\listorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\listorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\forms\\createrstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\createrstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|E:\\projcetAppC#\\BookStore\\views\\usercontrols\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\usercontrols\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\usercontrols\\updateproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\usercontrols\\updateproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\models\\modelviews\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:models\\modelviews\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,34 +58,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UpdateProduct.cs [Design]",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\UpdateProduct.cs",
-              "RelativeDocumentMoniker": "Views\\UserControls\\UpdateProduct.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\UpdateProduct.cs [Design]",
-              "RelativeToolTip": "Views\\UserControls\\UpdateProduct.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T13:28:55.64Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CreateOrder.cs",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\CreateOrder.cs",
-              "RelativeDocumentMoniker": "Views\\UserControls\\CreateOrder.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\CreateOrder.cs",
-              "RelativeToolTip": "Views\\UserControls\\CreateOrder.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAvwA0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T06:33:29.654Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
@@ -104,150 +70,155 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InfoEmployeeController.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Controllers\\InfoEmployeeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\InfoEmployeeController.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Controllers\\InfoEmployeeController.cs",
+              "RelativeToolTip": "Controllers\\InfoEmployeeController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowCMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T13:43:09.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormInfoEmp.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\FormInfoEmp.cs",
+              "RelativeDocumentMoniker": "Views\\Forms\\FormInfoEmp.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\FormInfoEmp.cs",
+              "RelativeToolTip": "Views\\Forms\\FormInfoEmp.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAtwBoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T13:34:08.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "FormInfoEmp.cs [Design]",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\FormInfoEmp.cs",
+              "RelativeDocumentMoniker": "Views\\Forms\\FormInfoEmp.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\FormInfoEmp.cs [Design]",
+              "RelativeToolTip": "Views\\Forms\\FormInfoEmp.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T13:25:53.476Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "eplManagement.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\eplManagement.cs",
+              "RelativeDocumentMoniker": "Views\\Forms\\eplManagement.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\eplManagement.cs",
+              "RelativeToolTip": "Views\\Forms\\eplManagement.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAA5wD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T13:15:35.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "eplManagement.cs [Design]",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\eplManagement.cs",
+              "RelativeDocumentMoniker": "Views\\Forms\\eplManagement.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\eplManagement.cs [Design]",
+              "RelativeToolTip": "Views\\Forms\\eplManagement.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T13:15:24.587Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SecurePassWordHasher.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Utilities\\SecurePassWordHasher.cs",
+              "RelativeDocumentMoniker": "Utilities\\SecurePassWordHasher.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Utilities\\SecurePassWordHasher.cs",
+              "RelativeToolTip": "Utilities\\SecurePassWordHasher.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T12:45:09.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DetailProductView.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Models\\ModelViews\\DetailProductView.cs",
+              "RelativeDocumentMoniker": "Models\\ModelViews\\DetailProductView.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Models\\ModelViews\\DetailProductView.cs",
+              "RelativeToolTip": "Models\\ModelViews\\DetailProductView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T10:46:05.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Address.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Models\\ModelViews\\Address.cs",
+              "RelativeDocumentMoniker": "Models\\ModelViews\\Address.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Models\\ModelViews\\Address.cs",
+              "RelativeToolTip": "Models\\ModelViews\\Address.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T10:43:46.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "InfoEmployee.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Models\\ModelViews\\InfoEmployee.cs",
+              "RelativeDocumentMoniker": "Models\\ModelViews\\InfoEmployee.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Models\\ModelViews\\InfoEmployee.cs",
+              "RelativeToolTip": "Models\\ModelViews\\InfoEmployee.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T10:38:50.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "infoEmployee.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\infoEmployee.cs",
+              "RelativeDocumentMoniker": "Views\\Forms\\infoEmployee.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\infoEmployee.cs",
+              "RelativeToolTip": "Views\\Forms\\infoEmployee.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAwDkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T10:37:18.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "TestForm.cs [Design]",
               "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Test\\TestForm.cs",
               "RelativeDocumentMoniker": "Test\\TestForm.cs",
               "ToolTip": "E:\\projcetAppC#\\BookStore\\Test\\TestForm.cs [Design]",
               "RelativeToolTip": "Test\\TestForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T06:29:40.475Z",
+              "WhenOpened": "2024-12-01T10:13:54.123Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CreateOrder.cs [Design]",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\CreateOrder.cs",
-              "RelativeDocumentMoniker": "Views\\UserControls\\CreateOrder.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\CreateOrder.cs [Design]",
-              "RelativeToolTip": "Views\\UserControls\\CreateOrder.cs [Design]",
+              "DocumentIndex": 3,
+              "Title": "DetailEmpDAO.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Models\\Data\\DetailEmpDAO.cs",
+              "RelativeDocumentMoniker": "Models\\Data\\DetailEmpDAO.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Models\\Data\\DetailEmpDAO.cs",
+              "RelativeToolTip": "Models\\Data\\DetailEmpDAO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T06:14:21.174Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ItemProductOrder.cs [Design]",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\ItemProductOrder.cs",
-              "RelativeDocumentMoniker": "Views\\UserControls\\ItemProductOrder.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\ItemProductOrder.cs [Design]",
-              "RelativeToolTip": "Views\\UserControls\\ItemProductOrder.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T04:55:48.827Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "createOrders.cs [Design]",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\createOrders.cs",
-              "RelativeDocumentMoniker": "Views\\Forms\\createOrders.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\createOrders.cs [Design]",
-              "RelativeToolTip": "Views\\Forms\\createOrders.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T01:34:58.242Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ListOrder.cs",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\ListOrder.cs",
-              "RelativeDocumentMoniker": "Views\\Forms\\ListOrder.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\ListOrder.cs",
-              "RelativeToolTip": "Views\\Forms\\ListOrder.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAUwBUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T01:24:22.585Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ListOrder.cs [Design]",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\ListOrder.cs",
-              "RelativeDocumentMoniker": "Views\\Forms\\ListOrder.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\ListOrder.cs [Design]",
-              "RelativeToolTip": "Views\\Forms\\ListOrder.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T01:23:35.824Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CreateRstock.cs",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\CreateRstock.cs",
-              "RelativeDocumentMoniker": "Views\\Forms\\CreateRstock.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\CreateRstock.cs",
-              "RelativeToolTip": "Views\\Forms\\CreateRstock.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T17:51:43.502Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CreateRstock.Designer.cs",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\CreateRstock.Designer.cs",
-              "RelativeDocumentMoniker": "Views\\Forms\\CreateRstock.Designer.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\CreateRstock.Designer.cs",
-              "RelativeToolTip": "Views\\Forms\\CreateRstock.Designer.cs",
-              "ViewState": "AgIAAIAAAAAAAAAAAAD4vxACAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T17:31:22.798Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CreateRstock.cs [Design]",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\CreateRstock.cs",
-              "RelativeDocumentMoniker": "Views\\Forms\\CreateRstock.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\CreateRstock.cs [Design]",
-              "RelativeToolTip": "Views\\Forms\\CreateRstock.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T17:13:07.175Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ListRestock.cs [Design]",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\ListRestock.cs",
-              "RelativeDocumentMoniker": "Views\\Forms\\ListRestock.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\ListRestock.cs [Design]",
-              "RelativeToolTip": "Views\\Forms\\ListRestock.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T16:46:57.212Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "SignIn.cs [Design]",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\SignIn.cs",
-              "RelativeDocumentMoniker": "Views\\UserControls\\SignIn.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\SignIn.cs [Design]",
-              "RelativeToolTip": "Views\\UserControls\\SignIn.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T15:03:55.717Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UpdateProduct.cs",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\UpdateProduct.cs",
-              "RelativeDocumentMoniker": "Views\\UserControls\\UpdateProduct.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\UpdateProduct.cs",
-              "RelativeToolTip": "Views\\UserControls\\UpdateProduct.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAjwB0AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T13:33:08.222Z",
+              "WhenOpened": "2024-12-01T10:55:27.792Z",
               "EditorCaption": ""
             }
           ]

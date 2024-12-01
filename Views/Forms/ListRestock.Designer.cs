@@ -40,7 +40,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            button1 = new Button();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
             guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -59,7 +58,6 @@
             // guna2Panel1
             // 
             guna2Panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2Panel1.Controls.Add(button1);
             guna2Panel1.Controls.Add(guna2TextBox1);
             guna2Panel1.Controls.Add(guna2NumericUpDown1);
             guna2Panel1.Controls.Add(guna2DataGridView1);
@@ -70,20 +68,6 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Panel1.Size = new Size(736, 521);
             guna2Panel1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button1.BackColor = Color.White;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Image = Properties.Resources.bin;
-            button1.Location = new Point(672, 20);
-            button1.Name = "button1";
-            button1.Padding = new Padding(1);
-            button1.Size = new Size(36, 27);
-            button1.TabIndex = 9;
-            button1.UseVisualStyleBackColor = false;
             // 
             // guna2TextBox1
             // 
@@ -98,6 +82,8 @@
             guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 163);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox1.IconRight = Properties.Resources.Search;
+            guna2TextBox1.IconRightOffset = new Point(10, 0);
             guna2TextBox1.Location = new Point(428, 16);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PasswordChar = '\0';
@@ -262,7 +248,6 @@
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Button button1;
         private DataGridViewTextBoxColumn RestockID;
         private DataGridViewTextBoxColumn RestockDate;
         private DataGridViewTextBoxColumn Supplier;

@@ -50,7 +50,6 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             label1 = new Label();
-            button1 = new Button();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -68,7 +67,6 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            button2 = new Button();
             guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             STT = new DataGridViewTextBoxColumn();
@@ -94,20 +92,6 @@
             label1.Text = "Nhập hàng";
             label1.Click += label1_Click;
             // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button1.BackColor = Color.White;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Image = Properties.Resources.bin;
-            button1.Location = new Point(523, 44);
-            button1.Name = "button1";
-            button1.Padding = new Padding(1);
-            button1.Size = new Size(28, 27);
-            button1.TabIndex = 11;
-            button1.UseVisualStyleBackColor = false;
-            // 
             // guna2TextBox1
             // 
             guna2TextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
@@ -122,6 +106,8 @@
             guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 163);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox1.IconRight = Properties.Resources.Search;
+            guna2TextBox1.IconRightOffset = new Point(10, 0);
             guna2TextBox1.Location = new Point(216, 40);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PasswordChar = '\0';
@@ -152,7 +138,6 @@
             guna2Panel1.Controls.Add(label4);
             guna2Panel1.Controls.Add(label3);
             guna2Panel1.Controls.Add(label2);
-            guna2Panel1.Controls.Add(button2);
             guna2Panel1.Controls.Add(guna2TextBox2);
             guna2Panel1.CustomizableEdges = customizableEdges17;
             guna2Panel1.FillColor = Color.White;
@@ -386,20 +371,6 @@
             label2.TabIndex = 14;
             label2.Text = "Nhà sách DALL Store";
             // 
-            // button2
-            // 
-            button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button2.BackColor = Color.White;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Image = Properties.Resources.bin;
-            button2.Location = new Point(263, 51);
-            button2.Name = "button2";
-            button2.Padding = new Padding(1);
-            button2.Size = new Size(28, 27);
-            button2.TabIndex = 13;
-            button2.UseVisualStyleBackColor = false;
-            // 
             // guna2TextBox2
             // 
             guna2TextBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
@@ -414,7 +385,10 @@
             guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 163);
             guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.IconLeft = Properties.Resources.bin;
+            guna2TextBox2.IconLeft = Properties.Resources.Search;
+            guna2TextBox2.IconLeftSize = new Size(16, 16);
+            guna2TextBox2.IconRight = Properties.Resources.plus;
+            guna2TextBox2.IconRightOffset = new Point(10, 0);
             guna2TextBox2.Location = new Point(10, 47);
             guna2TextBox2.Margin = new Padding(10);
             guna2TextBox2.Name = "guna2TextBox2";
@@ -524,7 +498,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(guna2DataGridView1);
             Controls.Add(guna2Panel1);
-            Controls.Add(button1);
             Controls.Add(guna2TextBox1);
             Controls.Add(label1);
             Name = "CreateRstock";
@@ -539,10 +512,8 @@
         #endregion
 
         private Label label1;
-        private Button button1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Button button2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Label label2;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;

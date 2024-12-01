@@ -4,6 +4,9 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Test\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Test\TestForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -11,6 +14,15 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\Forms\CreateRstock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\Forms\eplManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\Forms\FormInfoEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Forms\infoEmployee.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\Forms\ListOrder.cs">
@@ -28,10 +40,16 @@
     <Compile Update="Views\UserControls\ListProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Views\UserControls\SalesReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Views\UserControls\SignIn.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\UserControls\UpdateProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\UserControls\ProductReport.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

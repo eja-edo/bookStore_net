@@ -32,19 +32,16 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            button1 = new Button();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
             guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             productID = new DataGridViewTextBoxColumn();
             ProductName = new DataGridViewTextBoxColumn();
@@ -53,9 +50,11 @@
             categories = new DataGridViewTextBoxColumn();
             info = new DataGridViewImageColumn();
             delete = new DataGridViewImageColumn();
+            guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2NumericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)guna2NumericUpDown1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -94,7 +93,6 @@
             // 
             guna2Panel1.Controls.Add(guna2DataGridView1);
             guna2Panel1.Controls.Add(guna2NumericUpDown1);
-            guna2Panel1.Controls.Add(button1);
             guna2Panel1.Controls.Add(guna2TextBox1);
             guna2Panel1.CustomizableEdges = customizableEdges7;
             guna2Panel1.Location = new Point(10, 67);
@@ -103,57 +101,6 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Panel1.Size = new Size(756, 515);
             guna2Panel1.TabIndex = 8;
-            // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button1.BackColor = Color.White;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Image = Properties.Resources.bin;
-            button1.Location = new Point(697, 14);
-            button1.Margin = new Padding(10);
-            button1.Name = "button1";
-            button1.Padding = new Padding(1);
-            button1.Size = new Size(36, 27);
-            button1.TabIndex = 11;
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // guna2TextBox1
-            // 
-            guna2TextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2TextBox1.BorderRadius = 15;
-            guna2TextBox1.CustomizableEdges = customizableEdges5;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(453, 10);
-            guna2TextBox1.Margin = new Padding(10);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
-            guna2TextBox1.PlaceholderText = "Tìm kiếm theo mã phiếu nhập";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2TextBox1.Size = new Size(293, 36);
-            guna2TextBox1.TabIndex = 10;
-            // 
-            // guna2NumericUpDown1
-            // 
-            guna2NumericUpDown1.BackColor = Color.Transparent;
-            guna2NumericUpDown1.BorderRadius = 5;
-            guna2NumericUpDown1.CustomizableEdges = customizableEdges3;
-            guna2NumericUpDown1.Font = new Font("Segoe UI", 9F);
-            guna2NumericUpDown1.Location = new Point(10, 10);
-            guna2NumericUpDown1.Name = "guna2NumericUpDown1";
-            guna2NumericUpDown1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2NumericUpDown1.Size = new Size(102, 36);
-            guna2NumericUpDown1.TabIndex = 12;
-            guna2NumericUpDown1.UpDownButtonFillColor = Color.Silver;
             // 
             // guna2DataGridView1
             // 
@@ -271,6 +218,44 @@
             delete.SortMode = DataGridViewColumnSortMode.Automatic;
             delete.Width = 30;
             // 
+            // guna2NumericUpDown1
+            // 
+            guna2NumericUpDown1.BackColor = Color.Transparent;
+            guna2NumericUpDown1.BorderRadius = 5;
+            guna2NumericUpDown1.CustomizableEdges = customizableEdges3;
+            guna2NumericUpDown1.Font = new Font("Segoe UI", 9F);
+            guna2NumericUpDown1.Location = new Point(10, 10);
+            guna2NumericUpDown1.Name = "guna2NumericUpDown1";
+            guna2NumericUpDown1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2NumericUpDown1.Size = new Size(102, 36);
+            guna2NumericUpDown1.TabIndex = 12;
+            guna2NumericUpDown1.UpDownButtonFillColor = Color.Silver;
+            // 
+            // guna2TextBox1
+            // 
+            guna2TextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2TextBox1.BorderRadius = 15;
+            guna2TextBox1.CustomizableEdges = customizableEdges5;
+            guna2TextBox1.DefaultText = "";
+            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 163);
+            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox1.IconRight = Properties.Resources.Search;
+            guna2TextBox1.IconRightOffset = new Point(10, 0);
+            guna2TextBox1.Location = new Point(453, 10);
+            guna2TextBox1.Margin = new Padding(10);
+            guna2TextBox1.Name = "guna2TextBox1";
+            guna2TextBox1.PasswordChar = '\0';
+            guna2TextBox1.PlaceholderText = "Tìm kiếm theo mã phiếu nhập";
+            guna2TextBox1.SelectedText = "";
+            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2TextBox1.Size = new Size(293, 36);
+            guna2TextBox1.TabIndex = 10;
+            // 
             // ListOrder
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -281,8 +266,8 @@
             Name = "ListOrder";
             Size = new Size(776, 592);
             guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)guna2NumericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)guna2NumericUpDown1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -292,7 +277,6 @@
         private Label label1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Button button1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
