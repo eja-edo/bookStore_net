@@ -30,5 +30,6 @@ namespace BookStore.Controllers
             // Gọi phương thức SetProductData để điền dữ liệu vào DataGridView
             listProduct.SetProductData(products);
         }
+
     }
 }

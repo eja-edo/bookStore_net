@@ -1,5 +1,6 @@
 ﻿using BookStore.Controllers;
 using BookStore.Models.ModelViews;
+using BookStore.Utilities;
 using Guna.UI2.WinForms;
 using OpenTK.Graphics.ES20;
 using System;
@@ -24,7 +25,60 @@ namespace BookStore.Views.Forms
             isNew = true;
             employee = new InfoEmployee();
             controller = new UserController(this, employee);
+            isUpdate = true;
         }
+        public FormInfoEmp(int id)
+        {
+            InitializeComponent();
+            isNew = false;
+            isUpdate = false;
+            employee = new InfoEmployee();
+            controller = new UserController(this, employee);
+            buttonUpdate.FillColor = Color.Navy;
+            buttonUpdate.Text = "chỉnh Sửa";
+            controller.Load_data(id);
+        }
+        public void setUpdate()
+        {
+            isUpdate = true;
+            inpFirstName.Enabled = true;
+            inpLastName.Enabled = true;
+            inpEmail.Enabled = true;
+            inpPhone.Enabled = true;
+            inpPass.Enabled = true;
+            inpSalary.Enabled = true;
+            comboRole.Enabled = true;
+            ComboBoxSex.Enabled = true;
+            changeImg.Visible = true;
+            DateOld.Enabled = true;
+            inpAddress.Enabled = true;
+            inpUserName.Enabled = true;
+
+            buttonUpdate.FillColor = Color.Green;
+            buttonUpdate.Text = "Lưu thông tin";
+        }
+
+        public void setNotUpdate()
+        {
+            isUpdate= false;
+            inpFirstName.Enabled = false;
+            inpLastName.Enabled = false;
+            inpEmail.Enabled = false;    
+            inpPhone.Enabled = false;
+            inpPass.Enabled = false;
+            inpSalary.Enabled = false;
+            comboRole.Enabled = false;
+            ComboBoxSex.Enabled = false;
+            changeImg.Visible = false;
+            DateOld.Enabled = false;
+            inpAddress.Enabled = false;
+            inpUserName.Enabled = false;
+            
+            buttonUpdate.FillColor = Color.Navy;
+            buttonUpdate.Text = "Sửa thông tin";
+        }
+
+    public bool isUpdate { get; set; }
         public bool isNew { get; set; }
 
         // Các phương thức set giá trị cho từng điều khiển
@@ -67,32 +121,35 @@ namespace BookStore.Views.Forms
         {
             comboRole.SelectedItem = role;
         }
-
-        public void SetProfilePicture(string imagePath)
+        public void setAddress(Address address)
         {
-            try
+            if (address != null)
             {
-                // Tạo đường dẫn đầy đủ nếu imagePath là đường dẫn tương đối
-                string fullPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, imagePath);
-
-                // Kiểm tra nếu đường dẫn tồn tại
-                if (System.IO.File.Exists(fullPath))
-                {
-                    // Gán ảnh vào PictureBox
-                    guna2CirclePictureBox1.Image = Image.FromFile(fullPath);
-                }
-                else
-                {
-                    // Nếu không tìm thấy ảnh, có thể gán ảnh mặc định hoặc thông báo lỗi
-                    MessageBox.Show("Image not found at: " + fullPath);
-                }
+                // Ghép các thành phần địa chỉ thành một chuỗi, phân cách bằng dấu phẩy
+                inpAddress.Text = string.Join(", ",
+                    new[] { address.line, address.city, address.province }
+                    .Where(component => !string.IsNullOrEmpty(component)));
             }
-            catch (Exception ex)
+            else
             {
-                // Bắt lỗi nếu có vấn đề khi tải ảnh
-                MessageBox.Show("Error loading image: " + ex.Message);
+                // Nếu đối tượng Address null, xóa nội dung TextBox
+                inpAddress.Text = string.Empty;
             }
         }
+        public void SetUsername(string username)
+        {
+            // Cập nhật giá trị username lên giao diện
+            inpUserName.Text = username;
+        }
+        public void SetSalary(decimal salary)
+        {
+            // Cập nhật giá trị salary lên giao diện
+            inpSalary.Text = Format.formatPrice(salary); // Định dạng số với 2 chữ số thập phân
+        }
+
+
+
+
         private void InitializeComponent()
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -126,15 +183,15 @@ namespace BookStore.Views.Forms
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             inpEmail = new Guna2TextBox();
             label13 = new Label();
-            guna2Button2 = new Guna2Button();
+            buttonUpdate = new Guna2Button();
             inpFirstName = new Guna2TextBox();
             label12 = new Label();
             label11 = new Label();
-            guna2Button1 = new Guna2Button();
+            changeImg = new Guna2Button();
             guna2CirclePictureBox1 = new Guna2CirclePictureBox();
             comboRole = new Guna2ComboBox();
             label9 = new Label();
-            guna2TextBox6 = new Guna2TextBox();
+            inpPass = new Guna2TextBox();
             label8 = new Label();
             inpUserName = new Guna2TextBox();
             label7 = new Label();
@@ -187,24 +244,25 @@ namespace BookStore.Views.Forms
             label13.TabIndex = 53;
             label13.Text = "Email:";
             // 
-            // guna2Button2
+            // buttonUpdate
             // 
-            guna2Button2.BorderRadius = 12;
-            guna2Button2.CustomizableEdges = customizableEdges3;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.Green;
-            guna2Button2.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(658, 367);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button2.Size = new Size(154, 45);
-            guna2Button2.TabIndex = 52;
-            guna2Button2.Text = "lưu thông tin";
-            guna2Button2.Click += guna2Button2_Click;
+            buttonUpdate.BorderRadius = 12;
+            buttonUpdate.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            buttonUpdate.CustomizableEdges = customizableEdges3;
+            buttonUpdate.DisabledState.BorderColor = Color.DarkGray;
+            buttonUpdate.DisabledState.CustomBorderColor = Color.DarkGray;
+            buttonUpdate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            buttonUpdate.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            buttonUpdate.FillColor = Color.Green;
+            buttonUpdate.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            buttonUpdate.ForeColor = Color.White;
+            buttonUpdate.Location = new Point(658, 367);
+            buttonUpdate.Name = "buttonUpdate";
+            buttonUpdate.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            buttonUpdate.Size = new Size(154, 45);
+            buttonUpdate.TabIndex = 52;
+            buttonUpdate.Text = "lưu thông tin";
+            buttonUpdate.Click += guna2Button2_Click;
             // 
             // inpFirstName
             // 
@@ -248,21 +306,22 @@ namespace BookStore.Views.Forms
             label11.TabIndex = 49;
             label11.Text = "Chọn các ảnh có định dạng \r\n      (.jpg, .jeg, .png, .gif)\r\n\r\n";
             // 
-            // guna2Button1
+            // changeImg
             // 
-            guna2Button1.CustomizableEdges = customizableEdges7;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(700, 217);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button1.Size = new Size(112, 40);
-            guna2Button1.TabIndex = 48;
-            guna2Button1.Text = "Thay đổi ảnh";
+            changeImg.CustomizableEdges = customizableEdges7;
+            changeImg.DisabledState.BorderColor = Color.DarkGray;
+            changeImg.DisabledState.CustomBorderColor = Color.DarkGray;
+            changeImg.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            changeImg.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            changeImg.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            changeImg.ForeColor = Color.White;
+            changeImg.Location = new Point(700, 217);
+            changeImg.Name = "changeImg";
+            changeImg.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            changeImg.Size = new Size(112, 40);
+            changeImg.TabIndex = 48;
+            changeImg.Text = "Thay đổi ảnh";
+            changeImg.Click += guna2Button1_Click;
             // 
             // guna2CirclePictureBox1
             // 
@@ -274,7 +333,7 @@ namespace BookStore.Views.Forms
             guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges9;
             guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CirclePictureBox1.Size = new Size(195, 195);
-            guna2CirclePictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            guna2CirclePictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             guna2CirclePictureBox1.TabIndex = 47;
             guna2CirclePictureBox1.TabStop = false;
             // 
@@ -307,28 +366,29 @@ namespace BookStore.Views.Forms
             label9.TabIndex = 45;
             label9.Text = "Vai trò:";
             // 
-            // guna2TextBox6
+            // inpPass
             // 
-            guna2TextBox6.CustomizableEdges = customizableEdges12;
-            guna2TextBox6.DefaultText = "";
-            guna2TextBox6.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox6.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox6.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox6.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox6.Enabled = false;
-            guna2TextBox6.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox6.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            guna2TextBox6.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox6.Location = new Point(404, 334);
-            guna2TextBox6.Margin = new Padding(4);
-            guna2TextBox6.Name = "guna2TextBox6";
-            guna2TextBox6.Padding = new Padding(10);
-            guna2TextBox6.PasswordChar = '\0';
-            guna2TextBox6.PlaceholderText = "";
-            guna2TextBox6.SelectedText = "";
-            guna2TextBox6.ShadowDecoration.CustomizableEdges = customizableEdges13;
-            guna2TextBox6.Size = new Size(137, 31);
-            guna2TextBox6.TabIndex = 44;
+            inpPass.CustomizableEdges = customizableEdges12;
+            inpPass.DefaultText = "1111";
+            inpPass.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            inpPass.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            inpPass.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            inpPass.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            inpPass.Enabled = false;
+            inpPass.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            inpPass.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
+            inpPass.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            inpPass.Location = new Point(404, 334);
+            inpPass.Margin = new Padding(4);
+            inpPass.Name = "inpPass";
+            inpPass.Padding = new Padding(10);
+            inpPass.PasswordChar = '●';
+            inpPass.PlaceholderText = "";
+            inpPass.SelectedText = "";
+            inpPass.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            inpPass.Size = new Size(137, 31);
+            inpPass.TabIndex = 44;
+            inpPass.UseSystemPasswordChar = true;
             // 
             // label8
             // 
@@ -593,20 +653,20 @@ namespace BookStore.Views.Forms
             // 
             // FormInfoEmp
             // 
-            ClientSize = new Size(836, 473);
+            ClientSize = new Size(861, 473);
             Controls.Add(inpSalary);
             Controls.Add(label10);
             Controls.Add(inpEmail);
             Controls.Add(label13);
-            Controls.Add(guna2Button2);
+            Controls.Add(buttonUpdate);
             Controls.Add(inpFirstName);
             Controls.Add(label12);
             Controls.Add(label11);
-            Controls.Add(guna2Button1);
+            Controls.Add(changeImg);
             Controls.Add(guna2CirclePictureBox1);
             Controls.Add(comboRole);
             Controls.Add(label9);
-            Controls.Add(guna2TextBox6);
+            Controls.Add(inpPass);
             Controls.Add(label8);
             Controls.Add(inpUserName);
             Controls.Add(label7);
@@ -630,15 +690,15 @@ namespace BookStore.Views.Forms
 
         private Guna.UI2.WinForms.Guna2TextBox inpEmail;
         private Label label13;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button buttonUpdate;
         private Guna.UI2.WinForms.Guna2TextBox inpFirstName;
         private Label label12;
         private Label label11;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button changeImg;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2ComboBox comboRole;
         private Label label9;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
+        private Guna.UI2.WinForms.Guna2TextBox inpPass;
         private Label label8;
         private Guna.UI2.WinForms.Guna2TextBox inpUserName;
         private Label label7;
@@ -702,7 +762,7 @@ namespace BookStore.Views.Forms
 
         public decimal GetSalary()
         {
-            return decimal.TryParse(inpSalary.Text.Trim(), out decimal salary) ? salary : 0;
+            return Format.formatPrice_StrToDec(inpSalary.Text);
         }
 
         public string GetRole()
@@ -719,15 +779,113 @@ namespace BookStore.Views.Forms
         {
             return DateOld.Value;
         }
-        public string GetImg()
+        
+        public ItemEmp getItem()
         {
-            // Trả về đường dẫn hình ảnh, nếu hình ảnh chưa được thiết lập, trả về chuỗi rỗng
-            return string.IsNullOrEmpty(guna2CirclePictureBox1.ImageLocation) ? string.Empty : guna2CirclePictureBox1.ImageLocation;
+            return new ItemEmp
+            {
+                Id = employee.Id,
+                Name = employee.first_Name+" "+employee.last_Name,
+                Address = employee.Address.line,
+                Phone = employee.phone,
+                Salary = employee.salary,
+                Role = employee.role,
+            };
+        }
+
+        public void setID(int ID)
+        {
+            employee.Id = ID;
+            id.Text = ID.ToString();
+        }
+
+
+        public string getPass()
+        {
+            return inpPass.Text;
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             controller.SaveUser();
         }
+        public void SetProfilePicture(string imagePath)
+        {
+            try
+            {
+                // Tạo đường dẫn đầy đủ nếu imagePath là đường dẫn tương đối
+                string fullPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, imagePath);
+
+                // Kiểm tra nếu đường dẫn tồn tại
+                if (System.IO.File.Exists(fullPath))
+                {
+                    // Gán ảnh vào PictureBox
+                    guna2CirclePictureBox1.Image = Image.FromFile(fullPath);
+                }
+                else
+                {
+                    // Nếu không tìm thấy ảnh, có thể gán ảnh mặc định hoặc thông báo lỗi
+                    MessageBox.Show("Image not found at: " + fullPath);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Bắt lỗi nếu có vấn đề khi tải ảnh
+                MessageBox.Show("Error loading image: " + ex.Message);
+            }
+        }
+
+        public void setPass(string pass)
+        {
+            inpPass.Text = pass;
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                // Thiết lập thuộc tính cho hộp thoại
+                openFileDialog.Filter = "Image files (*.jpg;*.jpeg;*.png;*.bmp)|*.jpg;*.jpeg;*.png;*.bmp|All files (*.*)|*.*";
+                openFileDialog.Title = "Chọn một hình ảnh";
+                openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+
+                // Hiển thị hộp thoại và kiểm tra nếu người dùng chọn file
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Lấy đường dẫn của file được chọn
+                    string selectedFilePath = openFileDialog.FileName;
+
+                    // Định nghĩa thư mục "Static\Image\User" trong thư mục gốc của dự án
+                    string projectDirectory = Application.StartupPath; // Đảm bảo đường dẫn là thư mục gốc của dự án
+                    string imgDirectory = Path.Combine(projectDirectory, "Static", "Image", "User");
+
+                    // Kiểm tra và tạo thư mục "User" nếu chưa tồn tại
+                    if (!Directory.Exists(imgDirectory))
+                    {
+                        Directory.CreateDirectory(imgDirectory);
+                    }
+
+                    // Lấy tên file và tạo đường dẫn lưu ảnh vào thư mục "User"
+                    string fileName = Path.GetFileName(selectedFilePath);
+                    string destinationPath = Path.Combine(imgDirectory, fileName);
+
+                    // Sao chép file vào thư mục "User"
+                    try
+                    {
+                        File.Copy(selectedFilePath, destinationPath, true); // Nếu file đã tồn tại, ghi đè lên file cũ
+
+                        // Hiển thị hình ảnh trong guna2PictureBox1
+                        guna2CirclePictureBox1.Image = Image.FromFile(destinationPath);
+                        employee.urlImg = $"Static\\Image\\User\\{fileName}";
+                        MessageBox.Show($"Hình ảnh đã được tải lên thư mục Static\\Image\\User: Static\\Image\\User\\{fileName}", "Thông Báo");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Lỗi khi sao chép file: {ex.Message}", "Lỗi");
+                    }
+                }
+            }
+        }
+
     }
 }

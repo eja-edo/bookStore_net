@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BookStore.Utilities;
+using System.Data.Common;
 
 namespace BookStore.Models.Data
 {
@@ -19,7 +20,6 @@ namespace BookStore.Models.Data
             {
                 using (var connection = new DatabaseConnection().GetConnection())
                 {
-                    System.Diagnostics.Debug.WriteLine(1);
                     using (SqlCommand command = new SqlCommand("GetEmployeeInformation", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
@@ -47,6 +47,38 @@ namespace BookStore.Models.Data
                 System.Diagnostics.Debug.WriteLine($"Error: {ex.Message}\nStackTrace: {ex.StackTrace}");
             }
             return employees;
+        }
+
+
+        public static bool DeleteUserById(int userId)
+        {
+            try
+            {
+                using (var connection = new DatabaseConnection().GetConnection())
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand("DeleteUserById", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        // Thêm tham số UserId vào thủ tục
+                        command.Parameters.AddWithValue("@UserId", userId);
+
+                        // Thực thi thủ tục
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        // Nếu có dòng bị ảnh hưởng, tức là người dùng đã được xóa thành công
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Log hoặc xử lý lỗi tùy theo yêu cầu
+                Console.WriteLine($"Lỗi khi xóa người dùng: {ex.Message}");
+                return false;
+            }
         }
     }
 }

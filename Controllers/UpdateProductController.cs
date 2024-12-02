@@ -26,7 +26,6 @@ namespace BookStore.Controllers
             int productId = _view.ProductId;
             // Get basic product details
             DetailProductView productDetails = ProductDAO.GetProductDetailsBase(productId);
-            //System.Diagnostics.Debug.WriteLine(productDetails.Name);
             if (productDetails != null)
             {
             // Set the basic product details in the view

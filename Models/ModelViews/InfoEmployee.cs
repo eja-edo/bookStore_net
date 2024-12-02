@@ -12,7 +12,7 @@ namespace BookStore.Models.ModelViews
         public string? urlImg { get; set; }
         public string? first_Name { get; set; }
         public string? last_Name { get; set; }
-        public int? age { get; set; }
+        public DateTime age { get; set; }
         public string sex { get; set; }
         public string? email { get; set; }
         public string? phone { get; set; }
@@ -20,7 +20,7 @@ namespace BookStore.Models.ModelViews
         public string role { get; set; }
         public string username { get; set; }
         public decimal salary { get; set; }
-        public string password { get; set; }
+        public string? password { get; set; }
 
     }
 }

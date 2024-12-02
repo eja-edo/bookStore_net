@@ -36,7 +36,7 @@
             eplManagement1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             eplManagement1.Location = new Point(0, 1);
             eplManagement1.Name = "eplManagement1";
-            eplManagement1.Size = new Size(886, 572);
+            eplManagement1.Size = new Size(848, 572);
             eplManagement1.TabIndex = 0;
             // 
             // TestForm
@@ -44,7 +44,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            ClientSize = new Size(886, 574);
+            ClientSize = new Size(848, 574);
             Controls.Add(eplManagement1);
             Name = "TestForm";
             Text = "TestForm";
