@@ -31,36 +31,36 @@ namespace BookStore.Views.UserControls
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges57 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges58 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges55 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges59 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges60 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel8 = new Panel();
             inpPrice = new Guna.UI2.WinForms.Guna2TextBox();
@@ -80,7 +80,7 @@ namespace BookStore.Views.UserControls
             inpCreateDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             label6 = new Label();
             panel5 = new Panel();
-            comboCategories = new Guna.UI2.WinForms.Guna2ComboBox();
+            inpCategoryName = new Guna.UI2.WinForms.Guna2TextBox();
             label5 = new Label();
             panel3 = new Panel();
             inpPageCount = new Guna.UI2.WinForms.Guna2TextBox();
@@ -188,7 +188,7 @@ namespace BookStore.Views.UserControls
             // 
             inpPrice.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             inpPrice.BorderRadius = 10;
-            inpPrice.CustomizableEdges = customizableEdges31;
+            inpPrice.CustomizableEdges = customizableEdges1;
             inpPrice.DefaultText = "";
             inpPrice.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             inpPrice.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -204,7 +204,7 @@ namespace BookStore.Views.UserControls
             inpPrice.PasswordChar = '\0';
             inpPrice.PlaceholderText = "Không có thông tin";
             inpPrice.SelectedText = "";
-            inpPrice.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            inpPrice.ShadowDecoration.CustomizableEdges = customizableEdges2;
             inpPrice.Size = new Size(491, 35);
             inpPrice.TabIndex = 1;
             inpPrice.TextOffset = new Point(5, 0);
@@ -237,7 +237,7 @@ namespace BookStore.Views.UserControls
             // 
             inpPublishYear.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             inpPublishYear.BorderRadius = 10;
-            inpPublishYear.CustomizableEdges = customizableEdges33;
+            inpPublishYear.CustomizableEdges = customizableEdges3;
             inpPublishYear.DefaultText = "";
             inpPublishYear.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             inpPublishYear.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -253,7 +253,7 @@ namespace BookStore.Views.UserControls
             inpPublishYear.PasswordChar = '\0';
             inpPublishYear.PlaceholderText = "Không có thông tin";
             inpPublishYear.SelectedText = "";
-            inpPublishYear.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            inpPublishYear.ShadowDecoration.CustomizableEdges = customizableEdges4;
             inpPublishYear.Size = new Size(348, 35);
             inpPublishYear.TabIndex = 1;
             inpPublishYear.TextOffset = new Point(5, 0);
@@ -290,10 +290,10 @@ namespace BookStore.Views.UserControls
             guna2Panel1.BorderThickness = 1;
             guna2Panel1.Controls.Add(listAuthor);
             guna2Panel1.CustomBorderColor = Color.FromArgb(213, 218, 223);
-            guna2Panel1.CustomizableEdges = customizableEdges35;
+            guna2Panel1.CustomizableEdges = customizableEdges5;
             guna2Panel1.Location = new Point(3, 24);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Panel1.Size = new Size(485, 89);
             guna2Panel1.TabIndex = 1;
             // 
@@ -339,7 +339,7 @@ namespace BookStore.Views.UserControls
             // 
             inpISBN.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             inpISBN.BorderRadius = 10;
-            inpISBN.CustomizableEdges = customizableEdges37;
+            inpISBN.CustomizableEdges = customizableEdges7;
             inpISBN.DefaultText = "";
             inpISBN.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             inpISBN.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -355,7 +355,7 @@ namespace BookStore.Views.UserControls
             inpISBN.PasswordChar = '\0';
             inpISBN.PlaceholderText = "Không có thông tin";
             inpISBN.SelectedText = "";
-            inpISBN.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            inpISBN.ShadowDecoration.CustomizableEdges = customizableEdges8;
             inpISBN.Size = new Size(348, 35);
             inpISBN.TabIndex = 1;
             inpISBN.TextOffset = new Point(5, 0);
@@ -375,7 +375,7 @@ namespace BookStore.Views.UserControls
             // 
             label9.AutoSize = true;
             tableLayoutPanel1.SetColumnSpan(label9, 2);
-            label9.Location = new Point(3, 629);
+            label9.Location = new Point(3, 625);
             label9.Name = "label9";
             label9.Size = new Size(553, 15);
             label9.TabIndex = 3;
@@ -386,7 +386,7 @@ namespace BookStore.Views.UserControls
             panel6.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel6.Controls.Add(inpCreateDate);
             panel6.Controls.Add(label6);
-            panel6.Location = new Point(5, 392);
+            panel6.Location = new Point(5, 388);
             panel6.Margin = new Padding(5);
             panel6.Name = "panel6";
             panel6.Size = new Size(490, 54);
@@ -398,7 +398,7 @@ namespace BookStore.Views.UserControls
             inpCreateDate.BackColor = Color.White;
             inpCreateDate.BorderRadius = 10;
             inpCreateDate.Checked = true;
-            inpCreateDate.CustomizableEdges = customizableEdges39;
+            inpCreateDate.CustomizableEdges = customizableEdges9;
             inpCreateDate.Enabled = false;
             inpCreateDate.FillColor = Color.White;
             inpCreateDate.FocusedColor = Color.WhiteSmoke;
@@ -408,7 +408,7 @@ namespace BookStore.Views.UserControls
             inpCreateDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             inpCreateDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             inpCreateDate.Name = "inpCreateDate";
-            inpCreateDate.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            inpCreateDate.ShadowDecoration.CustomizableEdges = customizableEdges10;
             inpCreateDate.Size = new Size(370, 36);
             inpCreateDate.TabIndex = 2;
             inpCreateDate.Value = new DateTime(2024, 11, 16, 21, 0, 44, 71);
@@ -427,34 +427,39 @@ namespace BookStore.Views.UserControls
             // panel5
             // 
             panel5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            panel5.Controls.Add(comboCategories);
+            panel5.Controls.Add(inpCategoryName);
             panel5.Controls.Add(label5);
             panel5.Location = new Point(5, 325);
             panel5.Margin = new Padding(5);
             panel5.Name = "panel5";
-            panel5.Size = new Size(490, 57);
+            panel5.Size = new Size(490, 53);
             panel5.TabIndex = 5;
             // 
-            // comboCategories
+            // inpCategoryName
             // 
-            comboCategories.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            comboCategories.AutoCompleteSource = AutoCompleteSource.ListItems;
-            comboCategories.BackColor = Color.Transparent;
-            comboCategories.BorderRadius = 10;
-            comboCategories.CustomizableEdges = customizableEdges41;
-            comboCategories.DrawMode = DrawMode.OwnerDrawFixed;
-            comboCategories.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboCategories.Enabled = false;
-            comboCategories.FocusedColor = Color.FromArgb(94, 148, 255);
-            comboCategories.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            comboCategories.Font = new Font("Segoe UI", 10F);
-            comboCategories.ForeColor = Color.FromArgb(68, 88, 112);
-            comboCategories.ItemHeight = 30;
-            comboCategories.Location = new Point(0, 18);
-            comboCategories.Name = "comboCategories";
-            comboCategories.ShadowDecoration.CustomizableEdges = customizableEdges42;
-            comboCategories.Size = new Size(370, 36);
-            comboCategories.TabIndex = 1;
+            inpCategoryName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            inpCategoryName.BorderRadius = 10;
+            inpCategoryName.CustomizableEdges = customizableEdges11;
+            inpCategoryName.DefaultText = "";
+            inpCategoryName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            inpCategoryName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            inpCategoryName.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            inpCategoryName.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            inpCategoryName.Enabled = false;
+            inpCategoryName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            inpCategoryName.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 163);
+            inpCategoryName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            inpCategoryName.Location = new Point(-1, 18);
+            inpCategoryName.Margin = new Padding(3, 4, 3, 4);
+            inpCategoryName.Name = "inpCategoryName";
+            inpCategoryName.PasswordChar = '\0';
+            inpCategoryName.PlaceholderText = "Không có thông tin";
+            inpCategoryName.SelectedText = "";
+            inpCategoryName.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            inpCategoryName.Size = new Size(370, 35);
+            inpCategoryName.TabIndex = 2;
+            inpCategoryName.TextOffset = new Point(5, 0);
+            inpCategoryName.Validating += inpCategoryName_Validating;
             // 
             // label5
             // 
@@ -483,7 +488,7 @@ namespace BookStore.Views.UserControls
             // 
             inpPageCount.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             inpPageCount.BorderRadius = 10;
-            inpPageCount.CustomizableEdges = customizableEdges43;
+            inpPageCount.CustomizableEdges = customizableEdges13;
             inpPageCount.DefaultText = "";
             inpPageCount.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             inpPageCount.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -499,7 +504,7 @@ namespace BookStore.Views.UserControls
             inpPageCount.PasswordChar = '\0';
             inpPageCount.PlaceholderText = "Không có thông tin";
             inpPageCount.SelectedText = "";
-            inpPageCount.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            inpPageCount.ShadowDecoration.CustomizableEdges = customizableEdges14;
             inpPageCount.Size = new Size(189, 35);
             inpPageCount.TabIndex = 1;
             inpPageCount.TextOffset = new Point(5, 0);
@@ -529,7 +534,7 @@ namespace BookStore.Views.UserControls
             // inpProductName
             // 
             inpProductName.BorderRadius = 10;
-            inpProductName.CustomizableEdges = customizableEdges45;
+            inpProductName.CustomizableEdges = customizableEdges15;
             inpProductName.DefaultText = "";
             inpProductName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             inpProductName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -546,7 +551,7 @@ namespace BookStore.Views.UserControls
             inpProductName.PasswordChar = '\0';
             inpProductName.PlaceholderText = "Không có thông tin";
             inpProductName.SelectedText = "";
-            inpProductName.ShadowDecoration.CustomizableEdges = customizableEdges46;
+            inpProductName.ShadowDecoration.CustomizableEdges = customizableEdges16;
             inpProductName.Size = new Size(491, 35);
             inpProductName.TabIndex = 1;
             inpProductName.TextOffset = new Point(5, 0);
@@ -567,7 +572,7 @@ namespace BookStore.Views.UserControls
             panel7.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel7.Controls.Add(inpYearUpdate);
             panel7.Controls.Add(label7);
-            panel7.Location = new Point(505, 392);
+            panel7.Location = new Point(505, 388);
             panel7.Margin = new Padding(5);
             panel7.Name = "panel7";
             panel7.Size = new Size(491, 54);
@@ -579,7 +584,7 @@ namespace BookStore.Views.UserControls
             inpYearUpdate.BackColor = Color.White;
             inpYearUpdate.BorderRadius = 10;
             inpYearUpdate.Checked = true;
-            inpYearUpdate.CustomizableEdges = customizableEdges47;
+            inpYearUpdate.CustomizableEdges = customizableEdges17;
             inpYearUpdate.Enabled = false;
             inpYearUpdate.FillColor = Color.White;
             inpYearUpdate.FocusedColor = Color.WhiteSmoke;
@@ -589,7 +594,7 @@ namespace BookStore.Views.UserControls
             inpYearUpdate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             inpYearUpdate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             inpYearUpdate.Name = "inpYearUpdate";
-            inpYearUpdate.ShadowDecoration.CustomizableEdges = customizableEdges48;
+            inpYearUpdate.ShadowDecoration.CustomizableEdges = customizableEdges18;
             inpYearUpdate.Size = new Size(371, 36);
             inpYearUpdate.TabIndex = 2;
             inpYearUpdate.Value = new DateTime(2024, 11, 16, 21, 0, 44, 71);
@@ -611,7 +616,7 @@ namespace BookStore.Views.UserControls
             tableLayoutPanel1.SetColumnSpan(label11, 2);
             label11.Dock = DockStyle.Bottom;
             label11.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            label11.Location = new Point(3, 675);
+            label11.Location = new Point(3, 671);
             label11.Name = "label11";
             label11.Size = new Size(995, 19);
             label11.TabIndex = 10;
@@ -622,7 +627,7 @@ namespace BookStore.Views.UserControls
             inpDescription.AutoScroll = true;
             inpDescription.BorderRadius = 12;
             tableLayoutPanel1.SetColumnSpan(inpDescription, 2);
-            inpDescription.CustomizableEdges = customizableEdges49;
+            inpDescription.CustomizableEdges = customizableEdges19;
             inpDescription.DefaultText = "";
             inpDescription.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             inpDescription.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -633,15 +638,15 @@ namespace BookStore.Views.UserControls
             inpDescription.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             inpDescription.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 163);
             inpDescription.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            inpDescription.Location = new Point(3, 699);
+            inpDescription.Location = new Point(3, 695);
             inpDescription.Margin = new Padding(3, 5, 3, 5);
             inpDescription.Multiline = true;
             inpDescription.Name = "inpDescription";
             inpDescription.PasswordChar = '\0';
             inpDescription.PlaceholderText = "Không có thông tin";
             inpDescription.SelectedText = "";
-            inpDescription.ShadowDecoration.CustomizableEdges = customizableEdges50;
-            inpDescription.Size = new Size(995, 206);
+            inpDescription.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            inpDescription.Size = new Size(995, 210);
             inpDescription.TabIndex = 11;
             // 
             // panel1
@@ -658,7 +663,7 @@ namespace BookStore.Views.UserControls
             // inpProductID
             // 
             inpProductID.BorderRadius = 10;
-            inpProductID.CustomizableEdges = customizableEdges51;
+            inpProductID.CustomizableEdges = customizableEdges21;
             inpProductID.DefaultText = "";
             inpProductID.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             inpProductID.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -673,9 +678,9 @@ namespace BookStore.Views.UserControls
             inpProductID.Margin = new Padding(3, 4, 3, 4);
             inpProductID.Name = "inpProductID";
             inpProductID.PasswordChar = '\0';
-            inpProductID.PlaceholderText = "Không có thông tin";
+            inpProductID.PlaceholderText = "Tự động cập nhật";
             inpProductID.SelectedText = "";
-            inpProductID.ShadowDecoration.CustomizableEdges = customizableEdges52;
+            inpProductID.ShadowDecoration.CustomizableEdges = customizableEdges22;
             inpProductID.Size = new Size(490, 35);
             inpProductID.TabIndex = 1;
             inpProductID.TextOffset = new Point(5, 0);
@@ -697,7 +702,7 @@ namespace BookStore.Views.UserControls
             tableLayoutPanel1.SetColumnSpan(panel13, 2);
             panel13.Controls.Add(tableLayoutPanel2);
             panel13.Controls.Add(label8);
-            panel13.Location = new Point(3, 454);
+            panel13.Location = new Point(3, 450);
             panel13.Name = "panel13";
             panel13.Size = new Size(995, 172);
             panel13.TabIndex = 17;
@@ -722,7 +727,7 @@ namespace BookStore.Views.UserControls
             addImg.BorderColor = Color.Gray;
             addImg.BorderRadius = 12;
             addImg.BorderThickness = 1;
-            addImg.CustomizableEdges = customizableEdges57;
+            addImg.CustomizableEdges = customizableEdges23;
             addImg.DisabledState.BorderColor = Color.DarkGray;
             addImg.DisabledState.CustomBorderColor = Color.DarkGray;
             addImg.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -733,12 +738,13 @@ namespace BookStore.Views.UserControls
             addImg.Location = new Point(10, 10);
             addImg.Margin = new Padding(10);
             addImg.Name = "addImg";
-            addImg.ShadowDecoration.CustomizableEdges = customizableEdges58;
+            addImg.ShadowDecoration.CustomizableEdges = customizableEdges24;
             addImg.Size = new Size(95, 95);
             addImg.TabIndex = 0;
             addImg.Text = "+";
             addImg.TextOffset = new Point(2, -3);
             addImg.Visible = false;
+            addImg.Click += addImg_Click;
             // 
             // flowLayoutPanel1
             // 
@@ -774,7 +780,7 @@ namespace BookStore.Views.UserControls
             // 
             inpStock.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             inpStock.BorderRadius = 10;
-            inpStock.CustomizableEdges = customizableEdges53;
+            inpStock.CustomizableEdges = customizableEdges25;
             inpStock.DefaultText = "";
             inpStock.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             inpStock.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -790,7 +796,7 @@ namespace BookStore.Views.UserControls
             inpStock.PasswordChar = '\0';
             inpStock.PlaceholderText = "Không có thông tin";
             inpStock.SelectedText = "";
-            inpStock.ShadowDecoration.CustomizableEdges = customizableEdges54;
+            inpStock.ShadowDecoration.CustomizableEdges = customizableEdges26;
             inpStock.Size = new Size(370, 35);
             inpStock.TabIndex = 1;
             inpStock.TextOffset = new Point(5, 0);
@@ -822,7 +828,7 @@ namespace BookStore.Views.UserControls
             // 
             inpPublisher.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             inpPublisher.BorderRadius = 10;
-            inpPublisher.CustomizableEdges = customizableEdges55;
+            inpPublisher.CustomizableEdges = customizableEdges27;
             inpPublisher.DefaultText = "";
             inpPublisher.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             inpPublisher.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -838,7 +844,7 @@ namespace BookStore.Views.UserControls
             inpPublisher.PasswordChar = '\0';
             inpPublisher.PlaceholderText = "Không có thông tin";
             inpPublisher.SelectedText = "";
-            inpPublisher.ShadowDecoration.CustomizableEdges = customizableEdges56;
+            inpPublisher.ShadowDecoration.CustomizableEdges = customizableEdges28;
             inpPublisher.Size = new Size(491, 35);
             inpPublisher.TabIndex = 1;
             inpPublisher.TextOffset = new Point(5, 0);
@@ -871,7 +877,7 @@ namespace BookStore.Views.UserControls
             btnUpdateOrSave.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnUpdateOrSave.BorderRadius = 18;
             btnUpdateOrSave.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            btnUpdateOrSave.CustomizableEdges = customizableEdges59;
+            btnUpdateOrSave.CustomizableEdges = customizableEdges29;
             btnUpdateOrSave.DisabledState.BorderColor = Color.DarkGray;
             btnUpdateOrSave.DisabledState.CustomBorderColor = Color.DarkGray;
             btnUpdateOrSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -881,7 +887,7 @@ namespace BookStore.Views.UserControls
             btnUpdateOrSave.ForeColor = Color.White;
             btnUpdateOrSave.Location = new Point(896, 986);
             btnUpdateOrSave.Name = "btnUpdateOrSave";
-            btnUpdateOrSave.ShadowDecoration.CustomizableEdges = customizableEdges60;
+            btnUpdateOrSave.ShadowDecoration.CustomizableEdges = customizableEdges30;
             btnUpdateOrSave.Size = new Size(145, 36);
             btnUpdateOrSave.TabIndex = 2;
             btnUpdateOrSave.Text = "Chỉnh sửa";
@@ -972,7 +978,6 @@ namespace BookStore.Views.UserControls
         private Panel panel7;
         private Guna.UI2.WinForms.Guna2DateTimePicker inpYearUpdate;
         private Label label7;
-        private Guna.UI2.WinForms.Guna2ComboBox comboCategories;
         private FlowLayoutPanel flowLayoutPanel1;
         private Label label9;
         private Label label11;
@@ -1002,5 +1007,6 @@ namespace BookStore.Views.UserControls
         private Label label8;
         private TableLayoutPanel tableLayoutPanel2;
         private Guna.UI2.WinForms.Guna2Button addImg;
+        private Guna.UI2.WinForms.Guna2TextBox inpCategoryName;
     }
 }

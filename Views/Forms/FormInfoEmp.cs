@@ -653,7 +653,7 @@ namespace BookStore.Views.Forms
             // 
             // FormInfoEmp
             // 
-            ClientSize = new Size(861, 473);
+            ClientSize = new Size(835, 465);
             Controls.Add(inpSalary);
             Controls.Add(label10);
             Controls.Add(inpEmail);

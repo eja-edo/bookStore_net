@@ -1,5 +1,6 @@
 ﻿using BookStore.Controllers;
 using BookStore.Models.Entity;
+using BookStore.Models.ModelViews;
 using BookStore.Utilities;
 using Guna.UI2.WinForms;
 using System;
@@ -7,6 +8,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,20 +19,23 @@ namespace BookStore.Views.UserControls
     {
         private bool isBook;
         private UpdateProductController Controller;
-        public int ProductId { set; get; }
+        public bool isNew { get; set; }
+        public bool isUpdate { get; set; }
         public UpdateProduct()
         {
             InitializeComponent();
             Controller = new UpdateProductController(this);
             isBook = false;
+            isNew = true;
+            isUpdate = true;
         }
         public UpdateProduct(int id) : this()
         {
-            this.ProductId = id;
-            Controller.LoadProductDetails();
+
+            isNew = false;
+            isUpdate = false;
+            Controller.LoadProductDetails(id);
         }
-
-
 
         // Set Product ID
         public void SetProductId(string productId)
@@ -63,11 +68,29 @@ namespace BookStore.Views.UserControls
         {
             inpPublisher.Text = publisher;
         }
+        public String GetPublisher()
+        {
+            return inpPublisher.Text;
+        }
 
         // Set Publish Year
         public void SetPublishYear(string publishYear)
         {
             inpPublishYear.Text = publishYear;
+        }
+
+        public int GetPublicYear()
+        {
+            // Kiểm tra nếu inpPublishYear.Text có thể chuyển đổi sang int
+            if (int.TryParse(inpPublishYear.Text, out int publishYear))
+            {
+                return publishYear;
+            }
+            else
+            {
+                // Nếu không thể chuyển đổi, trả về một giá trị mặc định hoặc ném lỗi
+                throw new InvalidOperationException("Giá trị năm xuất bản không hợp lệ.");
+            }
         }
 
         // Set Page Count
@@ -76,11 +99,41 @@ namespace BookStore.Views.UserControls
             inpPageCount.Text = pageCount;
         }
 
+        public int GetPageCount()
+        {
+            // Kiểm tra nếu inpPublishYear.Text có thể chuyển đổi sang int
+            if (int.TryParse(inpPageCount.Text, out int count))
+            {
+                return count;
+            }
+            else
+            {
+                // Nếu không thể chuyển đổi, trả về một giá trị mặc định hoặc ném lỗi
+                throw new InvalidOperationException("Giá trị số trang không hợp lệ");
+            }
+        }
+
+
         // Set Stock
         public void SetStock(string stock)
         {
             inpStock.Text = stock;
         }
+
+        public int getStock()
+        {
+            // Kiểm tra nếu inpPublishYear.Text có thể chuyển đổi sang int
+            if (int.TryParse(inpStock.Text, out int stock))
+            {
+                return stock;
+            }
+            else
+            {
+                // Nếu không thể chuyển đổi, trả về một giá trị mặc định hoặc ném lỗi
+                throw new InvalidOperationException("Giá trị số lượng không hợp lệ");
+            }
+        }
+
 
         // Set Price
         public void SetPrice(string price)
@@ -117,8 +170,12 @@ namespace BookStore.Views.UserControls
         // Set Category
         public void SetCategory(string category)
         {
-            comboCategories.Items.Add(category);
-            comboCategories.SelectedItem = category;
+            inpCategoryName.Text = category;
+        }
+
+        public string GetCategory()
+        {
+            return inpCategoryName.Text;
         }
 
         // Set Author
@@ -133,7 +190,7 @@ namespace BookStore.Views.UserControls
                 foreach (var author in authors)
                 {
                     // Định dạng mỗi dòng: Tên Tác Giả - Chức Vụ
-                    string displayText = $"{author.Name} - {author.Role}";
+                    string displayText = $"{author.NameAuthor} - {author.Role}";
                     listAuthor.Items.Add(displayText);
                 }
             }
@@ -143,14 +200,48 @@ namespace BookStore.Views.UserControls
                 listAuthor.Items.Add("Không có tác giả nào.");
             }
         }
+        public void addImgAtTheEnd(string urlImg)
+        {
+            Controller.setEnListImg(urlImg);
+            var pictureBox = new Guna.UI2.WinForms.Guna2PictureBox
+            {
+                BackColor = Color.White,
+                BorderRadius = 12,
+                FillColor = Color.FromArgb(255, 128, 128),
+                ImageRotate = 0F,
+                Size = new Size(95, 95),
+                SizeMode = PictureBoxSizeMode.StretchImage,
+                Margin = new Padding(10),
+            };
+            // Kiểm tra và tải hình ảnh từ đường dẫn cục bộ
+            try
+            {
+                if (System.IO.File.Exists(urlImg))
+                {
+                    pictureBox.Image = Image.FromFile(urlImg);
+                }
+                else
+                {
+                    Console.WriteLine($"Hình ảnh không tồn tại: {urlImg}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Lỗi khi tải hình ảnh từ đường dẫn {urlImg}: {ex.Message}");
+            }
 
-        public void AddImagesToFlowLayoutPanel(List<string> imagePaths)
+            // Thêm PictureBox vào FlowLayoutPanel
+            flowLayoutPanel1.Controls.Add(pictureBox);
+
+        }
+
+        public void AddImagesToFlowLayoutPanel(Queue<string> imageUrls)
         {
             // Xóa các hình ảnh cũ (nếu cần)
             flowLayoutPanel1.Controls.Clear();
 
-            // Lặp qua danh sách đường dẫn hình ảnh
-            foreach (var path in imagePaths)
+            // Lặp qua danh sách đường dẫn hình ảnh trong Queue
+            foreach (var url in imageUrls)
             {
                 // Tạo một PictureBox mới
                 var pictureBox = new Guna.UI2.WinForms.Guna2PictureBox
@@ -167,24 +258,25 @@ namespace BookStore.Views.UserControls
                 // Kiểm tra và tải hình ảnh từ đường dẫn cục bộ
                 try
                 {
-                    if (System.IO.File.Exists(path))
+                    if (System.IO.File.Exists(url))
                     {
-                        pictureBox.Image = Image.FromFile(path);
+                        pictureBox.Image = Image.FromFile(url);
                     }
                     else
                     {
-                        Console.WriteLine($"Hình ảnh không tồn tại: {path}");
+                        Console.WriteLine($"Hình ảnh không tồn tại: {url}");
                     }
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Lỗi khi tải hình ảnh từ đường dẫn {path}: {ex.Message}");
+                    Console.WriteLine($"Lỗi khi tải hình ảnh từ đường dẫn {url}: {ex.Message}");
                 }
 
                 // Thêm PictureBox vào FlowLayoutPanel
                 flowLayoutPanel1.Controls.Add(pictureBox);
             }
         }
+
 
 
         public void setLayOutBook()
@@ -201,7 +293,7 @@ namespace BookStore.Views.UserControls
             }
         }
 
-        public void setLayoutProdcut()
+        public void setLayoutProduct()
         {
             if (isBook)
             {
@@ -214,61 +306,45 @@ namespace BookStore.Views.UserControls
                 isBook = false;
             }
         }
-        // Biến để theo dõi trạng thái "Checked" của nút
-        private bool isUpdate = false;
 
         private void btnUpdateOrSave_Click(object sender, EventArgs e)
         {
-
-            OnCheckedChanged();
-            // Toggle trạng thái isChecked
-            isUpdate = !isUpdate;
+            Controller.click_updateProdcut();
         }
 
-        private void OnCheckedChanged()
+        public void setIsUpdate()
         {
-            if (isUpdate)
-            {
-                btnUpdateOrSave.FillColor = Color.MediumBlue;
-                btnUpdateOrSave.Text = "Chỉnh sửa";        // Text khi được chọn
+            btnUpdateOrSave.FillColor = Color.Green; // Màu khi bỏ chọn
+            btnUpdateOrSave.Text = "Lưu";    // Text khi bỏ chọn
 
-                inpProductName.Enabled = false;
-                inpISBN.Enabled = false;
-                inpPublishYear.Enabled = false;
-                inpPageCount.Enabled = false;
-                inpPrice.Enabled = false;
-                comboCategories.Enabled = false;
-                inpPublisher.Enabled = false;
-                inpStock.Enabled = false;
-                inpDescription.Enabled = false;
-                addImg.Visible = false;
-
-                Controller.Click_UpdateProduct();
-            }
-            else
-            {
-                btnUpdateOrSave.FillColor = Color.Green; // Màu khi bỏ chọn
-                btnUpdateOrSave.Text = "Lưu";    // Text khi bỏ chọn
-
-                inpProductName.Enabled = true;
-                inpISBN.Enabled = true;
-                inpPublishYear.Enabled = true;
-                inpPageCount.Enabled = true;
-                inpPrice.Enabled = true;
-                comboCategories.Enabled = true;
-                inpPublisher.Enabled = true;
-                inpStock.Enabled = true;
-                inpDescription.Enabled = true;
-                addImg.Visible = true;
-
-            }
-
-            // Thực hiện các logic khác nếu cần
-            System.Diagnostics.Debug.WriteLine($"CheckedChanged: {isUpdate}");
-
+            inpProductName.Enabled = true;
+            inpISBN.Enabled = true;
+            inpPublishYear.Enabled = true;
+            inpPageCount.Enabled = true;
+            inpPrice.Enabled = true;
+            inpCategoryName.Enabled = true;
+            inpPublisher.Enabled = true;
+            inpStock.Enabled = true;
+            inpDescription.Enabled = true;
+            addImg.Visible = true;
         }
 
+        public void setEndUpdate()
+        {
+            btnUpdateOrSave.FillColor = Color.MediumBlue;
+            btnUpdateOrSave.Text = "Chỉnh sửa";        // Text khi được chọn
 
+            inpProductName.Enabled = false;
+            inpISBN.Enabled = false;
+            inpPublishYear.Enabled = false;
+            inpPageCount.Enabled = false;
+            inpPrice.Enabled = false;
+            inpCategoryName.Enabled = false;
+            inpPublisher.Enabled = false;
+            inpStock.Enabled = false;
+            inpDescription.Enabled = false;
+            addImg.Visible = false;
+        }
 
 
 
@@ -298,6 +374,73 @@ namespace BookStore.Views.UserControls
                 // Nếu trống, hiển thị thông báo lỗi
                 e.Cancel = true;
                 MessageBox.Show("Giá không được để trống.", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void inpCategoryName_Validating(object sender, CancelEventArgs e)
+        {
+            // Kiểm tra xem sender có phải là TextBox hay không
+            if (sender is Guna2TextBox textBox)
+            {
+                if (textBox.Text == "Sách")  // Kiểm tra nội dung nhập vào
+                {
+                    setLayOutBook();
+                }
+                else
+                {
+                    setLayoutProduct();
+                }
+            }
+            else
+            {
+                // Nếu sender không phải TextBox, bạn có thể xử lý thêm nếu cần thiết.
+                Console.WriteLine("Invalid control type");
+            }
+        }
+
+        private void addImg_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                // Thiết lập thuộc tính cho hộp thoại
+                openFileDialog.Filter = "Image files (*.jpg;*.jpeg;*.png;*.bmp)|*.jpg;*.jpeg;*.png;*.bmp|All files (*.*)|*.*";
+                openFileDialog.Title = "Chọn một hình ảnh";
+                openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+
+                // Hiển thị hộp thoại và kiểm tra nếu người dùng chọn file
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Lấy đường dẫn của file được chọn
+                    string selectedFilePath = openFileDialog.FileName;
+
+                    // Định nghĩa thư mục "Static\Image\User" trong thư mục gốc của dự án
+                    string projectDirectory = Application.StartupPath; // Đảm bảo đường dẫn là thư mục gốc của dự án
+                    string imgDirectory = Path.Combine(projectDirectory, "Static", "Image", "User");
+
+                    // Kiểm tra và tạo thư mục "User" nếu chưa tồn tại
+                    if (!Directory.Exists(imgDirectory))
+                    {
+                        Directory.CreateDirectory(imgDirectory);
+                    }
+
+                    // Lấy tên file và tạo đường dẫn lưu ảnh vào thư mục "User"
+                    string fileName = Path.GetFileName(selectedFilePath);
+                    string destinationPath = Path.Combine(imgDirectory, fileName);
+
+                    // Sao chép file vào thư mục "User"
+                    try
+                    {
+                        File.Copy(selectedFilePath, destinationPath, true); // Nếu file đã tồn tại, ghi đè lên file cũ
+
+
+                        addImgAtTheEnd($"Static\\Image\\User\\{fileName}");
+                        MessageBox.Show($"Hình ảnh đã được tải lên thư mục Static\\Image\\User: Static\\Image\\User\\{fileName}", "Thông Báo");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Lỗi khi sao chép file: {ex.Message}", "Lỗi");
+                    }
+                }
             }
         }
     }

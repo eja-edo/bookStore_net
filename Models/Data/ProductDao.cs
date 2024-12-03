@@ -19,12 +19,12 @@ namespace BookStore.Models.Data
             return reader.IsDBNull(ordinal) ? defaultValue : reader.GetFieldValue<T>(ordinal);
         }
 
+        // lấy danh sách thông tin cơ bản của sản phẩm
         public static List<ProductViewModel> GetProduct(int sl, int? CategoryID)
         {
             List<ProductViewModel> productViewModels = new List<ProductViewModel>();
             try
             {
-
                 using (var connection = new DatabaseConnection().GetConnection()) // Lấy một kết nối mới cho mỗi phương thức.
                 using (SqlCommand command = new SqlCommand("getProducts", connection))
                 {
@@ -57,43 +57,46 @@ namespace BookStore.Models.Data
             }
             return productViewModels;
         }
+
+        //Lấy thông tin chi tiết của sản phẩm
         public static DetailProductView GetProductDetailsBase(int productId)
         {
             DetailProductView productDetail = null;
 
             try
-            { 
+            {
                 using (var connection = new DatabaseConnection().GetConnection())
                 {
+                    connection.Open();
                     using (SqlCommand command = new SqlCommand("getProductDetails", connection))
                     {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@id", productId);
-                    connection.Open();
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        if (reader.Read())
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@id", productId);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            productDetail = new DetailProductView
+                            if (reader.Read())
                             {
-                                ProductID = reader.GetInt32(reader.GetOrdinal("ProductID")),
-                                Name = reader.GetString(reader.GetOrdinal("ProductName")),
-                                Price = reader.GetDecimal(reader.GetOrdinal("ProductPrice")),
-                                createDate = reader.GetDateTime(reader.GetOrdinal("CreatedAt")),
-                                updateDate = reader.GetDateTime(reader.GetOrdinal("UpdatedAt")),
-                                CategoryName = GetValueOrDefault(reader, "CategoryName", (string)null),
-                                description = GetValueOrDefault(reader, "ProductDescription", (string)null)
-                            };
+                                productDetail = new DetailProductView
+                                {
+                                    ProductID = reader.GetInt32(reader.GetOrdinal("ProductID")),
+                                    Name = reader.GetString(reader.GetOrdinal("ProductName")),
+                                    Price = reader.GetDecimal(reader.GetOrdinal("ProductPrice")),
+                                    createDate = reader.GetDateTime(reader.GetOrdinal("CreatedAt")),
+                                    updateDate = reader.GetDateTime(reader.GetOrdinal("UpdatedAt")),
+                                    CategoryName = GetValueOrDefault(reader, "CategoryName", (string)null),
+                                    description = GetValueOrDefault(reader, "ProductDescription", (string)null)
+                                };
+                            }
                         }
                     }
-                }
-                    //Lấy hình ảnh - Giờ đây sử dụng đối tượng kết nối đã lấy trong GetProductDetailsBase.
+
+                    // Lấy danh sách ảnh nếu productDetail đã được khởi tạo
                     if (productDetail != null)
                     {
                         productDetail.ListUrl = GetProductImageUrls(productId, connection);
                     }
                 }
-            
             }
             catch (Exception ex)
             {
@@ -103,7 +106,7 @@ namespace BookStore.Models.Data
             return productDetail;
         }
 
-
+        //Lấy thông tin chi tiết của của sách
         public static BookViewModel GetBookDetails(int productId)
         {
             BookViewModel bookDetail = null;
@@ -111,6 +114,8 @@ namespace BookStore.Models.Data
             try
             {
                 using (var connection = new DatabaseConnection().GetConnection())
+                {
+                    connection.Open();
                     using (SqlCommand command = new SqlCommand("getBookDetails", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
@@ -122,125 +127,213 @@ namespace BookStore.Models.Data
                             {
                                 bookDetail = new BookViewModel
                                 {
-                                    ISBN = reader.IsDBNull(reader.GetOrdinal("ISBN")) ? null : reader.GetString(reader.GetOrdinal("ISBN")),
-                                    Publisher = reader.IsDBNull(reader.GetOrdinal("Publisher")) ? null : reader.GetString(reader.GetOrdinal("Publisher")),
-                                    PublishingYear = reader.IsDBNull(reader.GetOrdinal("PublishYear")) ? null : reader.GetInt32(reader.GetOrdinal("PublishYear")),
-                                    PageCount = reader.IsDBNull(reader.GetOrdinal("PageCount")) ? null : reader.GetInt32(reader.GetOrdinal("PageCount"))
+                                    ISBN = GetValueOrDefault(reader, "ISBN", (string)null),
+                                    Publisher = GetValueOrDefault(reader, "Publisher", (string)null),
+                                    PublishingYear = GetValueOrDefault(reader, "PublishYear", (int?)null),
+                                    PageCount = GetValueOrDefault(reader, "PageCount", (int?)null),
                                 };
                             }
                         }
                     }
+
+                    // Lấy danh sách tác giả
+                    if (bookDetail != null)
+                    {
+                        bookDetail.Authors = GetAuthorsByBookId(productId, connection);
+                    }
+                }
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine("Error: " + ex.Message);
+                Console.WriteLine($"Lỗi lấy chi tiết sách: {ex.Message}");
             }
 
             return bookDetail;
         }
 
-
-        private static List<string> GetProductImageUrls(int productId, SqlConnection connection)
+        //lấy danh sách hình ảnh 
+        private static Queue<string> GetProductImageUrls(int productId, SqlConnection connection)
         {
-            List<string> imageUrls = new List<string>();
-
-            using (SqlCommand command = new SqlCommand("getListImgProduct", connection))
-            {
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@id", productId);
-
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        imageUrls.Add(reader.GetString(reader.GetOrdinal("url")));
-                    }
-                }
-            }
-
-            return imageUrls;
-        }
-
-
-        public static List<BookAuthor> GetBookAuthors(int bookId)
-        {
-        List<BookAuthor> authors = new List<BookAuthor>();
+            // Khởi tạo danh sách hình ảnh
+            List<ProductImage> imagesList = new List<ProductImage>();
 
             try
             {
-                using (var connection = new DatabaseConnection().GetConnection())
-                    using (SqlCommand command = new SqlCommand("getBookDetails", connection))
-                    {
-                        command.CommandType = CommandType.StoredProcedure; // Loại là thủ tục
-                        command.Parameters.AddWithValue("@id", bookId);    // Truyền tham số
+                using (SqlCommand command = new SqlCommand("getListImgProduct", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@id", productId);
 
-                        using (SqlDataReader reader = command.ExecuteReader())
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
                         {
-                            while (reader.Read())
+                            // Đọc URL và IndexImg từ kết quả truy vấn
+                            imagesList.Add(new ProductImage
                             {
-                                var author = new BookAuthor
-                                {
-                                    AuthorID = reader.GetInt32(reader.GetOrdinal("AuthorID")),
-                                    Name = reader.GetString(reader.GetOrdinal("Name")),
-                                    Role = reader.GetString(reader.GetOrdinal("Role"))
-                                };
-                                authors.Add(author);
-                            }
+                                Url = GetValueOrDefault(reader, "url", (string)null),
+                                Index = reader.GetInt32(reader.GetOrdinal("IndexImg"))
+                            });
                         }
                     }
+                }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error retrieving authors: {ex.Message}");
-                // Xử lý ngoại lệ (log lỗi, throw exception, v.v.)
+                Console.WriteLine($"Lỗi lấy danh sách ảnh: {ex.Message}");
             }
-        return authors;
+
+            // Sắp xếp danh sách theo IndexImg (tăng dần)
+            imagesList.Sort((x, y) => x.Index.CompareTo(y.Index));
+
+            // Khởi tạo Queue và thêm các URL vào Queue theo thứ tự IndexImg
+            Queue<string> imagesQueue = new Queue<string>();
+            foreach (var image in imagesList)
+            {
+                imagesQueue.Enqueue(image.Url);
+            }
+
+            return imagesQueue;
         }
 
 
-        public static int UpdateProduct(int productId, string name, decimal price, string description)
+        //lấy thông tin của tác giả theo id sách
+        private static List<BookAuthor> GetAuthorsByBookId(int bookId, SqlConnection connection)
         {
-            int rowsAffected = 0;
+            List<BookAuthor> authors = new List<BookAuthor>();
 
             try
             {
-                using (var connection = new DatabaseConnection().GetConnection())
-                using (SqlCommand command = new SqlCommand("updateProduct", connection))
+                using (SqlCommand command = new SqlCommand("getBookAuthors", connection))
                 {
-                    System.Diagnostics.Debug.WriteLine(1);
                     command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@id", bookId);
 
-                    command.Parameters.Add("@productID", SqlDbType.Int).Value = productId;
-                    command.Parameters.Add("@name", SqlDbType.NVarChar, 255).Value = name;
-                    command.Parameters.Add("@price", SqlDbType.Decimal).Value = price;
-                    command.Parameters.Add("@desc", SqlDbType.NVarChar).Value = description;
-
-                    SqlParameter returnParameter = new SqlParameter("@ReturnValue", SqlDbType.Int);
-                    returnParameter.Direction = ParameterDirection.ReturnValue;
-                    command.Parameters.Add(returnParameter);
-
-                    connection.Open(); 
-                    command.ExecuteNonQuery();
-                    rowsAffected = Convert.ToInt32(returnParameter.Value);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            BookAuthor author = new BookAuthor();
+                            author.NameAuthor = GetValueOrDefault(reader, "Name", (string)null);
+                            author.Role = GetValueOrDefault(reader, "Role", (string)null);
+                            authors.Add(author);
+                        }
+                    }
                 }
-            }
-            catch (SqlException sqlEx)
-            {
-                Console.WriteLine($"SQL Exception: {sqlEx.Message}");
-                throw new Exception("Database error during product update.", sqlEx);
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"An error occurred: {ex.Message}");
-                throw;
+                Console.WriteLine($"Lỗi lấy danh sách tác giả: {ex.Message}");
             }
-            return rowsAffected;
+
+            return authors;
+        }
+
+        public static DateTime UpdateProductDetails(DetailProductView productDetails)
+        {
+            DateTime lastUpdated = DateTime.MinValue;
+
+            using (SqlConnection connection = new DatabaseConnection().GetConnection())
+            {
+                try
+                {
+                    connection.Open();
+
+                    // Cập nhật thông tin sản phẩm
+                    using (SqlCommand command = new SqlCommand("UpdateProductInfo", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        // Thêm các tham số cho thông tin sản phẩm
+                        command.Parameters.AddWithValue("@ProductID", productDetails.ProductID);
+                        command.Parameters.AddWithValue("@ProductName", productDetails.Name);
+                        command.Parameters.AddWithValue("@CategoryName", productDetails.CategoryName);
+                        command.Parameters.AddWithValue("@StockLevel", productDetails.StockLevel ?? 0);  // Xử lý giá trị nullable
+                        command.Parameters.AddWithValue("@Price", productDetails.Price);
+                        command.Parameters.AddWithValue("@desc", productDetails.description);
+
+                        // Thực thi stored procedure và lấy kết quả LastUpdated
+                        object result = command.ExecuteScalar();
+
+                        // Kiểm tra và gán giá trị LastUpdated
+                        if (result != DBNull.Value)
+                        {
+                            lastUpdated = Convert.ToDateTime(result);
+                        }
+                    }
+
+                    // Cập nhật hình ảnh sản phẩm
+                    using (SqlCommand command = new SqlCommand("UpdateProductImages", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        // Add parameters for product images
+                        command.Parameters.AddWithValue("@ProductID", productDetails.ProductID);
+
+                        // Chuyển đổi danh sách hình ảnh thành chuỗi URL phân cách bởi dấu phẩy
+                        string imageUrls = ConvertImagesToUrlString(productDetails.ListUrl);
+                        command.Parameters.AddWithValue("@ImageURLs", imageUrls);
+
+                        // Execute the image update
+                        command.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Log or handle the exception
+                    throw new Exception("An error occurred while updating product details.", ex);
+                }
+            }
+
+            return lastUpdated;
         }
 
 
+        private static string ConvertImagesToUrlString(Queue<string> productImages)
+        {
+            // Lọc những URL không hợp lệ và lấy các URL hợp lệ
+            List<string> urls = productImages
+                .Where(url => !string.IsNullOrEmpty(url)) // Lọc các URL hợp lệ
+                .ToList();
+
+            // Ghép các URL thành chuỗi phân cách bởi dấu phẩy
+            return string.Join(",", urls);
+        }
+
+        public static void UpdateBookInfo(int bookId, string isbn, string publisher, int publishYear, int pageCount)
+        {
+            using (SqlConnection connection = new DatabaseConnection().GetConnection())
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand("UpdateBookInfo", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        // Thêm tham số vào thủ tục
+                        command.Parameters.Add(new SqlParameter("@BookID", SqlDbType.Int)).Value = bookId;
+                        command.Parameters.Add(new SqlParameter("@ISBN", SqlDbType.NVarChar, 20)).Value = isbn;
+                        command.Parameters.Add(new SqlParameter("@Publisher", SqlDbType.NVarChar, 255)).Value = publisher;
+                        command.Parameters.Add(new SqlParameter("@PublishYear", SqlDbType.Int)).Value = publishYear;
+                        command.Parameters.Add(new SqlParameter("@PageCount", SqlDbType.Int)).Value = pageCount;
+
+                        // Thực thi thủ tục
+                        command.ExecuteNonQuery();
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    // Xử lý lỗi
+                    Console.WriteLine("Lỗi khi cập nhật thông tin sách: " + ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+        }
+
     }
-
-
 }
-
-

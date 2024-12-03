@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookStore.Models.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,10 +15,17 @@ namespace BookStore.Models.ModelViews
         public int? StockLevel { get; set; }
         public DateTime createDate { get; set; }
         public DateTime updateDate { get; set; }
-        public List<string> ListUrl { get; set; }
+        public Queue<String> ListUrl { get; set; }
         public string? CategoryName { get; set; }
         public string? description { get; set; }
-        public DateTime? old { get; set; }
+
+
+        // Default constructor (optional)
+        public DetailProductView()
+        {
+            ListUrl = new Queue<string>(); // Initialize ListUrl as an empty Queue
+        }
     }
+
 
 }

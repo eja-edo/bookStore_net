@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookStore.Models.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace BookStore.Models.ModelViews
         public int? PublishingYear { get; set; }
         public string? Publisher { get; set; }
         public int? PageCount { get; set; }
+        public List<BookAuthor> Authors { get; set; }
     }
 
 }

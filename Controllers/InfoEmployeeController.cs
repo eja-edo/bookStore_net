@@ -138,11 +138,6 @@ namespace BookStore.Controllers
             {
                 userView.setUpdate();
             }
-
-            
         }
-            
-
     }
-
 }

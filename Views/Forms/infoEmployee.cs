@@ -84,5 +84,10 @@ namespace BookStore.Views.Forms
                 MessageBox.Show("Error loading image: " + ex.Message);
             }
         }
+
+        private void inpPhone_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }

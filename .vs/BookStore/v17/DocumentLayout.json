@@ -3,56 +3,48 @@
   "WorkspaceRootPath": "E:\\projcetAppC#\\BookStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\models\\data\\employeedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:models\\data\\employeedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\models\\data\\productdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:models\\data\\productdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\controllers\\updateproductcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:controllers\\updateproductcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\usercontrols\\updateproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\usercontrols\\updateproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\forms\\eplmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\eplmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\models\\data\\detailempdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:models\\data\\detailempdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\forms\\forminfoemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\forminfoemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\controllers\\infoemployeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:controllers\\infoemployeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\forms\\forminfoemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\forminfoemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\test\\testform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:test\\testform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\test\\testform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:test\\testform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\usercontrols\\listproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\usercontrols\\listproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\usercontrols\\updateproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\usercontrols\\updateproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|E:\\projcetAppC#\\BookStore\\views\\forms\\eplmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\eplmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\controllers\\updateproductcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:controllers\\updateproductcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\models\\entity\\productimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:models\\entity\\productimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|E:\\projcetAppC#\\BookStore\\views\\forms\\forminfoemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\forminfoemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\models\\modelviews\\detailproductview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:models\\modelviews\\detailproductview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\models\\data\\employeedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:models\\data\\employeedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|E:\\projcetAppC#\\BookStore\\test\\testform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:test\\testform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\utilities\\securepasswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:utilities\\securepasswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\models\\modelviews\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:models\\modelviews\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,32 +54,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TestForm.cs",
+              "DocumentIndex": 10,
+              "Title": "TestForm.cs [Design]",
               "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Test\\TestForm.cs",
               "RelativeDocumentMoniker": "Test\\TestForm.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Test\\TestForm.cs",
-              "RelativeToolTip": "Test\\TestForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Test\\TestForm.cs [Design]",
+              "RelativeToolTip": "Test\\TestForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T06:51:09.794Z",
+              "WhenOpened": "2024-12-02T16:45:13.237Z",
               "IsPinned": true,
-              "EditorCaption": ""
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ListProduct.cs [Design]",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\ListProduct.cs",
-              "RelativeDocumentMoniker": "Views\\UserControls\\ListProduct.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\ListProduct.cs [Design]",
-              "RelativeToolTip": "Views\\UserControls\\ListProduct.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "UpdateProduct.cs [Design]",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\UpdateProduct.cs",
+              "RelativeDocumentMoniker": "Views\\UserControls\\UpdateProduct.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\UpdateProduct.cs [Design]*",
+              "RelativeToolTip": "Views\\UserControls\\UpdateProduct.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T12:41:23.2Z",
+              "WhenOpened": "2024-12-03T04:17:47.821Z",
               "IsPinned": true,
               "EditorCaption": " [Design]"
             },
@@ -101,142 +92,113 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UpdateProductController.cs",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Controllers\\UpdateProductController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UpdateProductController.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Controllers\\UpdateProductController.cs",
-              "RelativeToolTip": "Controllers\\UpdateProductController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAtwB0AAAANAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "TestForm.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Test\\TestForm.cs",
+              "RelativeDocumentMoniker": "Test\\TestForm.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Test\\TestForm.cs",
+              "RelativeToolTip": "Test\\TestForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T14:10:53.638Z",
+              "WhenOpened": "2024-12-03T13:29:46.56Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EmployeeDAO.cs",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Models\\Data\\EmployeeDAO.cs",
-              "RelativeDocumentMoniker": "Models\\Data\\EmployeeDAO.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Models\\Data\\EmployeeDAO.cs",
-              "RelativeToolTip": "Models\\Data\\EmployeeDAO.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAawB8AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T14:04:16.737Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "InfoEmployeeController.cs",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Controllers\\InfoEmployeeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\InfoEmployeeController.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Controllers\\InfoEmployeeController.cs",
-              "RelativeToolTip": "Controllers\\InfoEmployeeController.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAowGcAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T13:43:09.408Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FormInfoEmp.cs",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\FormInfoEmp.cs",
-              "RelativeDocumentMoniker": "Views\\Forms\\FormInfoEmp.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\FormInfoEmp.cs",
-              "RelativeToolTip": "Views\\Forms\\FormInfoEmp.cs",
-              "ViewState": "AgIAAP4CAAAAAAAAAAAcwA4DAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T13:34:08.408Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "FormInfoEmp.cs [Design]",
               "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\FormInfoEmp.cs",
               "RelativeDocumentMoniker": "Views\\Forms\\FormInfoEmp.cs",
               "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\FormInfoEmp.cs [Design]",
               "RelativeToolTip": "Views\\Forms\\FormInfoEmp.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T13:25:53.476Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-03T10:42:41.354Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "eplManagement.cs",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\eplManagement.cs",
-              "RelativeDocumentMoniker": "Views\\Forms\\eplManagement.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\eplManagement.cs",
-              "RelativeToolTip": "Views\\Forms\\eplManagement.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAUwFgAAAAVAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "DetailProductView.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Models\\ModelViews\\DetailProductView.cs",
+              "RelativeDocumentMoniker": "Models\\ModelViews\\DetailProductView.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Models\\ModelViews\\DetailProductView.cs",
+              "RelativeToolTip": "Models\\ModelViews\\DetailProductView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T13:15:35.42Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T07:18:24.035Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "eplManagement.cs [Design]",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\eplManagement.cs",
-              "RelativeDocumentMoniker": "Views\\Forms\\eplManagement.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\eplManagement.cs [Design]",
-              "RelativeToolTip": "Views\\Forms\\eplManagement.cs [Design]",
+              "Title": "EmployeeDAO.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Models\\Data\\EmployeeDAO.cs",
+              "RelativeDocumentMoniker": "Models\\Data\\EmployeeDAO.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Models\\Data\\EmployeeDAO.cs",
+              "RelativeToolTip": "Models\\Data\\EmployeeDAO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T13:15:24.587Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-03T04:46:39.054Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "SecurePassWordHasher.cs",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Utilities\\SecurePassWordHasher.cs",
-              "RelativeDocumentMoniker": "Utilities\\SecurePassWordHasher.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Utilities\\SecurePassWordHasher.cs",
-              "RelativeToolTip": "Utilities\\SecurePassWordHasher.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwC8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ProductDao.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Models\\Data\\ProductDao.cs",
+              "RelativeDocumentMoniker": "Models\\Data\\ProductDao.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Models\\Data\\ProductDao.cs",
+              "RelativeToolTip": "Models\\Data\\ProductDao.cs",
+              "ViewState": "AgIAACMBAAAAAAAAAAA5wDYBAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T12:45:09.688Z",
+              "WhenOpened": "2024-12-03T04:40:13.821Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Address.cs",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Models\\ModelViews\\Address.cs",
-              "RelativeDocumentMoniker": "Models\\ModelViews\\Address.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Models\\ModelViews\\Address.cs",
-              "RelativeToolTip": "Models\\ModelViews\\Address.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "UpdateProductController.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Controllers\\UpdateProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UpdateProductController.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Controllers\\UpdateProductController.cs",
+              "RelativeToolTip": "Controllers\\UpdateProductController.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAIwIoAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T10:43:46.314Z",
+              "WhenOpened": "2024-12-03T04:32:52.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductImage.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Models\\Entity\\ProductImage.cs",
+              "RelativeDocumentMoniker": "Models\\Entity\\ProductImage.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Models\\Entity\\ProductImage.cs",
+              "RelativeToolTip": "Models\\Entity\\ProductImage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T06:56:09.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UpdateProduct.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\UpdateProduct.cs",
+              "RelativeDocumentMoniker": "Views\\UserControls\\UpdateProduct.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\UpdateProduct.cs*",
+              "RelativeToolTip": "Views\\UserControls\\UpdateProduct.cs*",
+              "ViewState": "AgIAAC8BAAAAAAAAAAAgwDcBAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T04:17:53.34Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TestForm.cs [Design]",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Test\\TestForm.cs",
-              "RelativeDocumentMoniker": "Test\\TestForm.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Test\\TestForm.cs [Design]",
-              "RelativeToolTip": "Test\\TestForm.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "TestForm.Designer.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Test\\TestForm.Designer.cs",
+              "RelativeDocumentMoniker": "Test\\TestForm.Designer.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Test\\TestForm.Designer.cs",
+              "RelativeToolTip": "Test\\TestForm.Designer.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T10:13:54.123Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DetailEmpDAO.cs",
-              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Models\\Data\\DetailEmpDAO.cs",
-              "RelativeDocumentMoniker": "Models\\Data\\DetailEmpDAO.cs",
-              "ToolTip": "E:\\projcetAppC#\\BookStore\\Models\\Data\\DetailEmpDAO.cs",
-              "RelativeToolTip": "Models\\Data\\DetailEmpDAO.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAuwEYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T10:55:27.792Z",
+              "WhenOpened": "2024-12-03T04:13:01.981Z",
               "EditorCaption": ""
             }
           ]
