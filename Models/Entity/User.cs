@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace BookStore.Models.Entity;
 
-public partial class User
+public class User
 {
     public int UserId { get; set; }
 
@@ -13,11 +13,13 @@ public partial class User
 
     public string? LastName { get; set; }
 
+    public DateTime old { get; set; }
+
+    public string Sex {  get; set; }
+    public string Role { get; set; }
+    public decimal Salary { get; set; }
+
     public string? Email { get; set; }
-
-    public string? Role { get; set; }
-
-    public string Password { get; set; } = null!;
 
     public string? Phone { get; set; }
 
@@ -26,8 +28,4 @@ public partial class User
     public string? City { get; set; }
 
     public string? Province { get; set; }
-
-    public DateTime? CreatedAt { get; set; }
-
-    public DateTime? UpdatedAt { get; set; }
 }

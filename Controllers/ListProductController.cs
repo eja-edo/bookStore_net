@@ -25,7 +25,7 @@ namespace BookStore.Controllers
         {
             // Lấy dữ liệu sản phẩm từ ProductDAO
             //ProductDAO productDAO = new ProductDAO();
-            List<ProductViewModel> products = ProductDAO.GetProduct(10, null); // Lấy 10 sản phẩm (hoặc tham số phù hợp)
+            List<ProductViewModel> products = ProductDAO.GetProduct(1000, null); // Lấy 10 sản phẩm (hoặc tham số phù hợp)
 
             // Gọi phương thức SetProductData để điền dữ liệu vào DataGridView
             listProduct.SetProductData(products);

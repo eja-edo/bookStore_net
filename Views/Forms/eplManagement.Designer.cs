@@ -64,25 +64,26 @@
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.IconRight = Properties.Resources.Search;
             guna2TextBox1.IconRightOffset = new Point(10, 0);
-            guna2TextBox1.Location = new Point(10, 10);
-            guna2TextBox1.Margin = new Padding(10);
+            guna2TextBox1.Location = new Point(11, 13);
+            guna2TextBox1.Margin = new Padding(11, 13, 11, 13);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PasswordChar = '\0';
             guna2TextBox1.PlaceholderText = "Tìm kiếm theo mã phiếu nhập";
             guna2TextBox1.SelectedText = "";
             guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2TextBox1.Size = new Size(341, 36);
+            guna2TextBox1.Size = new Size(390, 48);
             guna2TextBox1.TabIndex = 12;
+            guna2TextBox1.TextChanged += guna2TextBox1_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 163);
             label1.ForeColor = Color.FromArgb(64, 64, 64);
-            label1.Location = new Point(21, 66);
-            label1.Margin = new Padding(10);
+            label1.Location = new Point(24, 73);
+            label1.Margin = new Padding(11, 13, 11, 13);
             label1.Name = "label1";
-            label1.Size = new Size(254, 29);
+            label1.Size = new Size(314, 35);
             label1.TabIndex = 14;
             label1.Text = "Danh sách nhân viên";
             // 
@@ -91,7 +92,7 @@
             guna2DataGridView1.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = Color.White;
             guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            guna2DataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            guna2DataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(224, 224, 224);
             dataGridViewCellStyle2.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
@@ -112,15 +113,15 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             guna2DataGridView1.GridColor = Color.White;
-            guna2DataGridView1.Location = new Point(21, 99);
-            guna2DataGridView1.Margin = new Padding(15);
+            guna2DataGridView1.Location = new Point(24, 106);
+            guna2DataGridView1.Margin = new Padding(17, 20, 17, 20);
             guna2DataGridView1.Name = "guna2DataGridView1";
             guna2DataGridView1.ReadOnly = true;
             guna2DataGridView1.RowHeadersVisible = false;
             guna2DataGridView1.RowHeadersWidth = 100;
             guna2DataGridView1.RowTemplate.Height = 50;
             guna2DataGridView1.ScrollBars = ScrollBars.Vertical;
-            guna2DataGridView1.Size = new Size(888, 453);
+            guna2DataGridView1.Size = new Size(1015, 630);
             guna2DataGridView1.TabIndex = 15;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -148,36 +149,42 @@
             // EplID
             // 
             EplID.HeaderText = "Mã NV";
+            EplID.MinimumWidth = 6;
             EplID.Name = "EplID";
             EplID.ReadOnly = true;
             // 
             // EplName
             // 
             EplName.HeaderText = "Họ và tên";
+            EplName.MinimumWidth = 6;
             EplName.Name = "EplName";
             EplName.ReadOnly = true;
             // 
             // Role
             // 
             Role.HeaderText = "Vị trí";
+            Role.MinimumWidth = 6;
             Role.Name = "Role";
             Role.ReadOnly = true;
             // 
             // Phone
             // 
             Phone.HeaderText = "Số điện thoại";
+            Phone.MinimumWidth = 6;
             Phone.Name = "Phone";
             Phone.ReadOnly = true;
             // 
             // Salary
             // 
             Salary.HeaderText = "Lương";
+            Salary.MinimumWidth = 6;
             Salary.Name = "Salary";
             Salary.ReadOnly = true;
             // 
             // Address
             // 
             Address.HeaderText = "Địa chỉ";
+            Address.MinimumWidth = 6;
             Address.Name = "Address";
             Address.ReadOnly = true;
             // 
@@ -186,6 +193,7 @@
             info.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             info.FillWeight = 71.06599F;
             info.HeaderText = "";
+            info.MinimumWidth = 6;
             info.Name = "info";
             info.ReadOnly = true;
             info.Resizable = DataGridViewTriState.True;
@@ -197,6 +205,7 @@
             delete.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             delete.FillWeight = 71.0659943F;
             delete.HeaderText = "";
+            delete.MinimumWidth = 6;
             delete.Name = "delete";
             delete.ReadOnly = true;
             delete.Resizable = DataGridViewTriState.True;
@@ -215,24 +224,26 @@
             guna2Button1.FillColor = Color.FromArgb(46, 58, 168);
             guna2Button1.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 163);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(790, 14);
+            guna2Button1.Location = new Point(840, 27);
+            guna2Button1.Margin = new Padding(3, 4, 3, 4);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button1.Size = new Size(119, 41);
+            guna2Button1.Size = new Size(199, 55);
             guna2Button1.TabIndex = 16;
             guna2Button1.Text = "+ Thêm mới";
             guna2Button1.Click += guna2Button1_Click;
             // 
             // eplManagement
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(guna2Button1);
             Controls.Add(guna2DataGridView1);
             Controls.Add(label1);
             Controls.Add(guna2TextBox1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "eplManagement";
-            Size = new Size(924, 567);
+            Size = new Size(1056, 756);
             Load += eplManagement_Load;
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
             ResumeLayout(false);

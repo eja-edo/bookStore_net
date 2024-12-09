@@ -13,15 +13,14 @@ namespace BookStore.Controllers
         {
             this.listProduct = listProduct;
         }
-
         public void LoadData()
         {
             // Lấy dữ liệu sản phẩm từ ProductDAO
             //ProductDAO productDAO = new ProductDAO();
-            List<ItemEmp> products = EmployeeDAO.GetEmployees(); // Lấy 10 sản phẩm (hoặc tham số phù hợp)
+            listProduct.currentEmps = EmployeeDAO.GetEmployees(); // Lấy 10 sản phẩm (hoặc tham số phù hợp)
 
             // Gọi phương thức SetProductData để điền dữ liệu vào DataGridView
-            listProduct.SetEmpsData(products);
+            listProduct.SetEmpsData(listProduct.currentEmps);
         }
     }
 }

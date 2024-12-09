@@ -1,4 +1,5 @@
 ﻿using BookStore.Controllers;
+using BookStore.Models.Data;
 using BookStore.Models.Entity;
 using BookStore.Models.ModelViews;
 using BookStore.Utilities;
@@ -8,10 +9,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Security.AccessControl;
 using System.Security.Policy;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BookStore.Views.UserControls
 {
@@ -21,20 +25,29 @@ namespace BookStore.Views.UserControls
         private UpdateProductController Controller;
         public bool isNew { get; set; }
         public bool isUpdate { get; set; }
-        public UpdateProduct()
+
+        public DataTable authorsTable { get; set; }
+        private ListProduct panelP;
+        public UpdateProduct(ListProduct panelP)
         {
+            this.panelP = panelP;
             InitializeComponent();
+            authorsTable = new DataTable();
+            authorsTable.Columns.Add("Tên tác giả", typeof(string)); // Cột cho tên tác giả
+            authorsTable.Columns.Add("Vai trò", typeof(string));
+            guna2DataGridView1.DataSource = authorsTable;
             Controller = new UpdateProductController(this);
             isBook = false;
             isNew = true;
             isUpdate = true;
         }
-        public UpdateProduct(int id) : this()
+        public UpdateProduct(ListProduct panelP, int id) : this(panelP)
         {
-
+            this.panelP = panelP;
             isNew = false;
             isUpdate = false;
             Controller.LoadProductDetails(id);
+            setEndUpdate();
         }
 
         // Set Product ID
@@ -89,7 +102,7 @@ namespace BookStore.Views.UserControls
             else
             {
                 // Nếu không thể chuyển đổi, trả về một giá trị mặc định hoặc ném lỗi
-                throw new InvalidOperationException("Giá trị năm xuất bản không hợp lệ.");
+                return 0;
             }
         }
 
@@ -109,7 +122,7 @@ namespace BookStore.Views.UserControls
             else
             {
                 // Nếu không thể chuyển đổi, trả về một giá trị mặc định hoặc ném lỗi
-                throw new InvalidOperationException("Giá trị số trang không hợp lệ");
+                return 0;
             }
         }
 
@@ -129,8 +142,7 @@ namespace BookStore.Views.UserControls
             }
             else
             {
-                // Nếu không thể chuyển đổi, trả về một giá trị mặc định hoặc ném lỗi
-                throw new InvalidOperationException("Giá trị số lượng không hợp lệ");
+                return 0;
             }
         }
 
@@ -179,26 +191,18 @@ namespace BookStore.Views.UserControls
         }
 
         // Set Author
-        public void SetAuthors(List<BookAuthor> authors)
+        public void SetAuthors(List<BookAuthor> auts)
         {
-            // Xóa các mục cũ trong ListBox
-            listAuthor.Items.Clear();
-
-            if (authors != null && authors.Count > 0)
+            authorsTable.Clear();
+            if(auts != null){
+            // Thêm dữ liệu mới từ danh sách vào DataTable
+            foreach (var aut in auts)
             {
-                // Lặp qua danh sách tác giả và thêm vào ListBox
-                foreach (var author in authors)
-                {
-                    // Định dạng mỗi dòng: Tên Tác Giả - Chức Vụ
-                    string displayText = $"{author.NameAuthor} - {author.Role}";
-                    listAuthor.Items.Add(displayText);
-                }
-            }
-            else
-            {
-                // Trường hợp danh sách rỗng hoặc null
-                listAuthor.Items.Add("Không có tác giả nào.");
-            }
+                DataRow row = authorsTable.NewRow();
+                row[0] = aut.NameAuthor;
+                row[1] = aut.Role;
+                authorsTable.Rows.Add(row);
+            }}
         }
         public void addImgAtTheEnd(string urlImg)
         {
@@ -290,6 +294,7 @@ namespace BookStore.Views.UserControls
                 panel3.Visible = true;
                 panel12.Visible = true;
                 isBook = true;
+                listBox1.Location = new Point(40, 462);
             }
         }
 
@@ -304,11 +309,89 @@ namespace BookStore.Views.UserControls
                 panel3.Visible = false;
                 panel12.Visible = false;
                 isBook = false;
+                listBox1.Location = new Point(43, 269);
             }
+        }
+
+        private bool ValidateInputs()
+        {
+
+            // Thẩm định tên sản phẩm
+            if (string.IsNullOrWhiteSpace(inpProductName.Text) || inpProductName.Text.Length > 100)
+            {
+                MessageBox.Show("Tên sản phẩm không được để trống và không vượt quá 100 ký tự.");
+                return false;
+            }
+
+            // Thẩm định danh mục
+            if (string.IsNullOrWhiteSpace(inpCategoryName.Text))
+            {
+                MessageBox.Show("Danh mục không được để trống.");
+                return false;
+            }
+
+            // Thẩm định số trang
+            if ((!int.TryParse(inpPageCount.Text, out int pageCount) || pageCount <= 0)&& inpCategoryName.Text == "Sách")
+            {
+                MessageBox.Show("Số trang phải là số nguyên dương.");
+                return false;
+            }
+
+            // Thẩm định tồn kho
+            if (!int.TryParse(inpStock.Text, out int stock) || stock < 0)
+            {
+                MessageBox.Show("Số lượng tồn kho phải là số nguyên không âm.");
+                return false;
+            }
+
+            decimal price = Format.formatPrice_StrToDec(inpPrice.Text);
+            // Thẩm định giá
+            if ( price <= 0)
+            {
+                MessageBox.Show("Giá sản phẩm phải là số thực dương.");
+                return false;
+            }
+
+            // Thẩm định nhà xuất bản
+            if (string.IsNullOrWhiteSpace(inpPublisher.Text) && inpCategoryName.Text == "Sách")
+            {
+                MessageBox.Show("Nhà xuất bản không được để trống.");
+                return false;
+            }
+
+            // Thẩm định năm xuất bản
+            if ((!int.TryParse(inpPublishYear.Text, out int publishYear) || publishYear < 1900 || publishYear > DateTime.Now.Year) && inpCategoryName.Text == "Sách")
+            {
+                MessageBox.Show("Năm xuất bản không hợp lệ (phải từ 1900 đến năm hiện tại).");
+                return false;
+            }
+
+            // Thẩm định ISBN
+            if (!Regex.IsMatch(inpISBN.Text, @"^(97(8|9))?\d{9}(\d|X)$") && inpCategoryName.Text == "Sách")
+            {
+                MessageBox.Show("ISBN không hợp lệ.");
+                return false;
+            }
+
+            // Thẩm định mô tả
+            if (inpDescription.Text.Length > 1000)
+            {
+                MessageBox.Show("Mô tả không được vượt quá 1000 ký tự.");
+                return false;
+            }
+
+
+            return true;
         }
 
         private void btnUpdateOrSave_Click(object sender, EventArgs e)
         {
+
+            if (!ValidateInputs())
+            {
+                return;
+            }
+
             Controller.click_updateProdcut();
         }
 
@@ -324,9 +407,10 @@ namespace BookStore.Views.UserControls
             inpPrice.Enabled = true;
             inpCategoryName.Enabled = true;
             inpPublisher.Enabled = true;
-            inpStock.Enabled = true;
             inpDescription.Enabled = true;
+            guna2DataGridView1.Enabled = true;
             addImg.Visible = true;
+            
         }
 
         public void setEndUpdate()
@@ -341,9 +425,10 @@ namespace BookStore.Views.UserControls
             inpPrice.Enabled = false;
             inpCategoryName.Enabled = false;
             inpPublisher.Enabled = false;
-            inpStock.Enabled = false;
             inpDescription.Enabled = false;
+            guna2DataGridView1.Enabled = false;
             addImg.Visible = false;
+            listBox1.Visible = false;
         }
 
 
@@ -356,7 +441,7 @@ namespace BookStore.Views.UserControls
             if (!string.IsNullOrWhiteSpace(textBox.Text))
             {
                 // Thử chuyển đổi giá trị trong TextBox thành số thập phân
-                if (decimal.TryParse(textBox.Text, out decimal price))
+                if (decimal.TryParse(textBox.Text, out decimal price)&& (price < 100000000))
                 {
                     // Format lại giá trị số
                     textBox.Text = Format.formatPrice(price);
@@ -373,7 +458,7 @@ namespace BookStore.Views.UserControls
             {
                 // Nếu trống, hiển thị thông báo lỗi
                 e.Cancel = true;
-                MessageBox.Show("Giá không được để trống.", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Giá không được để trống và nhỏ nhỏ hơn 1000000000.", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -441,6 +526,92 @@ namespace BookStore.Views.UserControls
                         MessageBox.Show($"Lỗi khi sao chép file: {ex.Message}", "Lỗi");
                     }
                 }
+            }
+        }
+
+        private void inpCategoryName_TextChanged(object sender, EventArgs e)
+        {
+            string input = inpCategoryName.Text.Trim();
+
+            if (!string.IsNullOrEmpty(input))
+            {
+                // Lấy danh sách gợi ý từ cơ sở dữ liệu
+                List<string> suggestions = CategoriesDAO.GetSuggestedCategories(input);
+
+                // Xóa gợi ý cũ
+                listBox1.Items.Clear();
+                listBox1.Items.AddRange(suggestions.ToArray());
+
+                if (suggestions.Count > 0)
+                {
+                    // Hiển thị ListBox bên dưới TextBox
+                    listBox1.Visible = true;
+                    listBox1.BringToFront();
+                    if (isBook)
+                    {
+                        listBox1.Location = new Point(40, 350);
+                    }
+                    else listBox1.Location = new Point(43, 269);
+                    listBox1.Width = inpCategoryName.Width;
+                    //listBox1.Height = Math.Min(100, suggestions.Count * listBox1.ItemHeight); // Giới hạn chiều cao
+                }
+                else
+                {
+                    listBox1.Visible = false; // Ẩn nếu không có gợi ý
+                }
+            }
+            else
+            {
+                listBox1.Visible = false; // Ẩn nếu TextBox trống
+            }
+        }
+
+        private void listBox1_DoubleClick(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+            {
+                // Cập nhật giá trị vào TextBox
+                inpCategoryName.Text = listBox1.SelectedItem.ToString();
+                if (inpCategoryName.Text == "Sách")
+                {
+                    setLayOutBook();
+                }
+                listBox1.Visible = false; // Ẩn ListBox
+            }
+        }
+
+        private void inpCategoryName_LostFocus(object sender, EventArgs e)
+        {
+            // Kiểm tra nếu focus không chuyển sang ListBox
+            if (!listBox1.Focused)
+            {
+                if (listBox1.Items.Count > 0)
+                {
+                    inpCategoryName.Text = listBox1.Items[0].ToString();
+                    if (inpCategoryName.Text == "Sách")
+                    {
+                        setLayOutBook();
+                    }
+                    //listBox1.Visible = false;
+                }
+                // Ẩn ListBox nếu focus không nằm trên ListBox
+                listBox1.Visible = false;
+
+            }
+
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(!isNew)
+            {
+                panelP.addData(Controller.getItem());
+            }
+            if (this.Parent != null)
+            {
+                // Loại bỏ UserControl con khỏi Form cha
+                this.Parent.Controls.Remove(this);
             }
         }
     }

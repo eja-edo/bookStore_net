@@ -28,45 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            button1 = new Button();
+            productReport1 = new Views.UserControls.ProductReport();
             SuspendLayout();
             // 
-            // label1
+            // productReport1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(12, 23);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
-            // 
-            // button1
-            // 
-            button1.Location = new Point(415, 20);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            productReport1.Dock = DockStyle.Fill;
+            productReport1.Location = new Point(0, 0);
+            productReport1.Margin = new Padding(3, 4, 3, 4);
+            productReport1.Name = "productReport1";
+            productReport1.Size = new Size(914, 600);
+            productReport1.TabIndex = 0;
             // 
             // Form2
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button1);
-            Controls.Add(label1);
+            ClientSize = new Size(914, 600);
+            Controls.Add(productReport1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form2";
             Text = "Form2";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private Button button1;
+        private Views.UserControls.ProductReport productReport1;
     }
 }

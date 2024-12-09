@@ -22,8 +22,10 @@ namespace BookStore.Views.Forms
         {
             InitializeComponent();
             controller = new ListEmpController(this);
+            currentEmps = new List<ItemEmp>();
         }
 
+        public List<ItemEmp> currentEmps { get; set; }
 
 
         public void SetEmpsData(List<ItemEmp> emps)
@@ -47,6 +49,20 @@ namespace BookStore.Views.Forms
             }
         }
 
+        public void SearchEmps(string keyword)
+        {
+            // Lọc danh sách dựa trên từ khóa tìm kiếm
+            var filteredEmps = currentEmps.Where(emp =>
+               emp.Name.Contains(keyword, StringComparison.OrdinalIgnoreCase) ||
+                emp.Role.Contains(keyword, StringComparison.OrdinalIgnoreCase) ||
+                emp.Phone.Contains(keyword, StringComparison.OrdinalIgnoreCase) ||
+                emp.Address.Contains(keyword, StringComparison.OrdinalIgnoreCase)).ToList();
+
+            // Cập nhật lại DataGridView với dữ liệu đã lọc
+            SetEmpsData(filteredEmps);
+        }
+
+
         private void eplManagement_Load(object sender, EventArgs e)
         {
             System.Diagnostics.Debug.WriteLine(1);
@@ -57,6 +73,25 @@ namespace BookStore.Views.Forms
         {
             FormInfoEmp newEmploy = new FormInfoEmp();
             newEmploy.ShowDialog();
+            ItemEmp item = newEmploy.getItem();
+            currentEmps.Add(item);
+            if (item.Id != 0)
+            {
+                int rowIndex = guna2DataGridView1.Rows.Add();
+                // Cập nhật giá trị của các ô trong DataGridView
+                guna2DataGridView1.Rows[rowIndex].Cells["EplID"].Value = item.Id;
+                guna2DataGridView1.Rows[rowIndex].Cells["EplName"].Value = item.Name;
+                guna2DataGridView1.Rows[rowIndex].Cells["Role"].Value = item.Role;
+                guna2DataGridView1.Rows[rowIndex].Cells["Phone"].Value = item.Phone;
+                guna2DataGridView1.Rows[rowIndex].Cells["Salary"].Value = Format.formatPrice(item.Salary);
+                guna2DataGridView1.Rows[rowIndex].Cells["Address"].Value = item.Address;
+                guna2DataGridView1.Rows[rowIndex].Cells["info"].Value = Properties.Resources.edit;
+                guna2DataGridView1.Rows[rowIndex].Cells["delete"].Value = Properties.Resources.bin;
+            }
+            else
+            {
+                MessageBox.Show("Không có dữ liệu được trả về!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -106,10 +141,11 @@ namespace BookStore.Views.Forms
                     // Tạo đối tượng FormInfoEmp và truyền ID
                     FormInfoEmp newEmploy = new FormInfoEmp(id);
                     var result = newEmploy.ShowDialog();
-                    
+
                     //if (result == DialogResult.OK) // Kiểm tra nếu form con trả về DialogResult.OK
                     // Lấy dữ liệu từ form con
                     ItemEmp item = newEmploy.getItem();
+                    currentEmps.Add(item);
                     if (item != null)
                     {
                         // Cập nhật giá trị của các ô trong DataGridView
@@ -132,6 +168,11 @@ namespace BookStore.Views.Forms
             }
         }
 
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = guna2TextBox1.Text.Trim();
+            SearchEmps(keyword);
+        }
     }
 }
 

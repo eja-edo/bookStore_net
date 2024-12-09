@@ -28,15 +28,18 @@ namespace BookStore.Models.Data
                         {
                             while (reader.Read())
                             {
-                                employees.Add(new ItemEmp
+                                var employee = new ItemEmp
                                 {
-                                    Id = reader.GetInt32(reader.GetOrdinal("Id")),
-                                    Name = reader.GetString(reader.GetOrdinal("Name")),
-                                    Role = reader.GetString(reader.GetOrdinal("Role")),
-                                    Phone = reader.GetString(reader.GetOrdinal("Phone")),
-                                    Salary = reader.GetDecimal(reader.GetOrdinal("Salary")),
-                                    Address = reader.GetString(reader.GetOrdinal("Address"))
-                                });
+                                    // Kiểm tra và lấy giá trị nếu không phải NULL
+                                    Id = reader.IsDBNull(reader.GetOrdinal("Id")) ? 0 : reader.GetInt32(reader.GetOrdinal("Id")),
+                                    Name = reader.IsDBNull(reader.GetOrdinal("Name")) ? string.Empty : reader.GetString(reader.GetOrdinal("Name")),
+                                    Role = reader.IsDBNull(reader.GetOrdinal("Role")) ? string.Empty : reader.GetString(reader.GetOrdinal("Role")),
+                                    Phone = reader.IsDBNull(reader.GetOrdinal("Phone")) ? string.Empty : reader.GetString(reader.GetOrdinal("Phone")),
+                                    Salary = reader.IsDBNull(reader.GetOrdinal("Salary")) ? 0 : reader.GetDecimal(reader.GetOrdinal("Salary")),
+                                    Address = reader.IsDBNull(reader.GetOrdinal("Address")) ? string.Empty : reader.GetString(reader.GetOrdinal("Address"))
+                                };
+
+                                employees.Add(employee);
                             }
                         }
                     }
@@ -48,6 +51,7 @@ namespace BookStore.Models.Data
             }
             return employees;
         }
+
 
 
         public static bool DeleteUserById(int userId)

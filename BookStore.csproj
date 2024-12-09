@@ -43,10 +43,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\MyComponent\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="Static\Image\bin.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

@@ -93,24 +93,26 @@ namespace BookStore.Models.Data
 
                         // Thêm các tham số vào câu lệnh SQL
                         command.Parameters.AddWithValue("@Username", employee.username);
-                        command.Parameters.AddWithValue("@UrlImg", employee.urlImg ?? (object)DBNull.Value);
-                        command.Parameters.AddWithValue("@FirstName", employee.first_Name ?? (object)DBNull.Value);
-                        command.Parameters.AddWithValue("@LastName", employee.last_Name ?? (object)DBNull.Value);
-                        command.Parameters.AddWithValue("@Email", employee.email ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@UrlImg", (object)employee.urlImg ?? DBNull.Value);
+                        command.Parameters.AddWithValue("@FirstName", (object)employee.first_Name ?? DBNull.Value);
+                        command.Parameters.AddWithValue("@LastName", (object)employee.last_Name ?? DBNull.Value);
+                        command.Parameters.AddWithValue("@Email", (object)employee.email ?? DBNull.Value);
                         command.Parameters.AddWithValue("@Sex", employee.sex);
                         command.Parameters.AddWithValue("@Role", employee.role);
+                        command.Parameters.AddWithValue("@old", employee.age.Date); // Đảm bảo truyền kiểu DateTime
                         command.Parameters.AddWithValue("@HashedPassword", hashedPassword);
-                        command.Parameters.AddWithValue("@Phone", employee.phone ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@salt", salt);
+                        command.Parameters.AddWithValue("@Phone", (object)employee.phone ?? DBNull.Value);
                         command.Parameters.AddWithValue("@Salary", employee.salary);
-                        command.Parameters.AddWithValue("@old", employee.age);
-                        // Thêm các thông tin địa chỉ nếu có
-                        command.Parameters.AddWithValue("@AddressLine", employee.Address?.line ?? (object)DBNull.Value);
-                        command.Parameters.AddWithValue("@City", employee.Address?.city ?? (object)DBNull.Value);
-                        command.Parameters.AddWithValue("@Province", employee.Address?.province ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@AddressLine", (object)employee.Address?.line ?? DBNull.Value);
+                        command.Parameters.AddWithValue("@City", (object)employee.Address?.city ?? DBNull.Value);
+                        command.Parameters.AddWithValue("@Province", (object)employee.Address?.province ?? DBNull.Value);
 
                         // Thêm tham số OUTPUT để nhận ID mới
-                        SqlParameter outputParam = new SqlParameter("@NewUserId", SqlDbType.Int);
-                        outputParam.Direction = ParameterDirection.Output;
+                        SqlParameter outputParam = new SqlParameter("@NewUserId", SqlDbType.Int)
+                        {
+                            Direction = ParameterDirection.Output
+                        };
                         command.Parameters.Add(outputParam);
 
                         // Thực thi câu lệnh SQL
@@ -123,7 +125,7 @@ namespace BookStore.Models.Data
 
                             // Commit giao dịch nếu thành công
                             transaction.Commit();
-                            return true; // Nếu có ít nhất một dòng bị ảnh hưởng, tức là đã thêm thành công
+                            return true;
                         }
                         else
                         {
@@ -139,9 +141,10 @@ namespace BookStore.Models.Data
                 // Nếu có lỗi xảy ra, rollback giao dịch và ghi log
                 transaction?.Rollback();
                 Console.WriteLine($"Error: {ex.Message}");
-                return false; // Trả về false nếu có lỗi xảy ra
+                return false;
             }
         }
+
 
         public static bool UpdateUser(InfoEmployee employee, out string errorMessage)
         {
@@ -181,10 +184,12 @@ namespace BookStore.Models.Data
                             string salt;
                             string hashedPassword = SecurePasswordHasher.HashPassword(employee.password, out salt);
                             command.Parameters.Add(new SqlParameter("@HashedPassword", SqlDbType.VarChar, 255) { Value = hashedPassword });
+                            command.Parameters.Add(new SqlParameter("@salt", SqlDbType.VarChar, 255) { Value = salt });
                         }
                         else
                         {
                             command.Parameters.Add(new SqlParameter("@HashedPassword", SqlDbType.VarChar, 255) { Value = DBNull.Value });
+                            command.Parameters.Add(new SqlParameter("@salt", SqlDbType.VarChar, 255) { Value = DBNull.Value });
                         }
 
                         // Thực thi câu lệnh SQL

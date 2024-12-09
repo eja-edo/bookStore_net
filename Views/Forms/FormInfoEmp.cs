@@ -10,6 +10,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -223,7 +224,7 @@ namespace BookStore.Views.Forms
             inpEmail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             inpEmail.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             inpEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            inpEmail.Location = new Point(124, 256);
+            inpEmail.Location = new Point(152, 256);
             inpEmail.Margin = new Padding(4);
             inpEmail.Name = "inpEmail";
             inpEmail.Padding = new Padding(10);
@@ -231,7 +232,7 @@ namespace BookStore.Views.Forms
             inpEmail.PlaceholderText = "";
             inpEmail.SelectedText = "";
             inpEmail.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            inpEmail.Size = new Size(417, 31);
+            inpEmail.Size = new Size(471, 31);
             inpEmail.TabIndex = 54;
             // 
             // label13
@@ -240,7 +241,7 @@ namespace BookStore.Views.Forms
             label13.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             label13.Location = new Point(22, 263);
             label13.Name = "label13";
-            label13.Size = new Size(52, 18);
+            label13.Size = new Size(64, 23);
             label13.TabIndex = 53;
             label13.Text = "Email:";
             // 
@@ -256,10 +257,10 @@ namespace BookStore.Views.Forms
             buttonUpdate.FillColor = Color.Green;
             buttonUpdate.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 163);
             buttonUpdate.ForeColor = Color.White;
-            buttonUpdate.Location = new Point(658, 367);
+            buttonUpdate.Location = new Point(651, 404);
             buttonUpdate.Name = "buttonUpdate";
             buttonUpdate.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            buttonUpdate.Size = new Size(154, 45);
+            buttonUpdate.Size = new Size(211, 45);
             buttonUpdate.TabIndex = 52;
             buttonUpdate.Text = "lưu thông tin";
             buttonUpdate.Click += guna2Button2_Click;
@@ -275,7 +276,7 @@ namespace BookStore.Views.Forms
             inpFirstName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             inpFirstName.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             inpFirstName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            inpFirstName.Location = new Point(124, 58);
+            inpFirstName.Location = new Point(152, 58);
             inpFirstName.Margin = new Padding(4);
             inpFirstName.Name = "inpFirstName";
             inpFirstName.Padding = new Padding(10);
@@ -283,7 +284,7 @@ namespace BookStore.Views.Forms
             inpFirstName.PlaceholderText = "";
             inpFirstName.SelectedText = "";
             inpFirstName.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            inpFirstName.Size = new Size(417, 31);
+            inpFirstName.Size = new Size(471, 31);
             inpFirstName.TabIndex = 51;
             // 
             // label12
@@ -292,7 +293,7 @@ namespace BookStore.Views.Forms
             label12.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             label12.Location = new Point(22, 65);
             label12.Name = "label12";
-            label12.Size = new Size(92, 18);
+            label12.Size = new Size(117, 23);
             label12.TabIndex = 50;
             label12.Text = "Họ tên đệm:";
             // 
@@ -300,9 +301,9 @@ namespace BookStore.Views.Forms
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label11.Location = new Point(611, 265);
+            label11.Location = new Point(661, 279);
             label11.Name = "label11";
-            label11.Size = new Size(185, 48);
+            label11.Size = new Size(229, 57);
             label11.TabIndex = 49;
             label11.Text = "Chọn các ảnh có định dạng \r\n      (.jpg, .jeg, .png, .gif)\r\n\r\n";
             // 
@@ -315,7 +316,7 @@ namespace BookStore.Views.Forms
             changeImg.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             changeImg.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
             changeImg.ForeColor = Color.White;
-            changeImg.Location = new Point(700, 217);
+            changeImg.Location = new Point(750, 231);
             changeImg.Name = "changeImg";
             changeImg.ShadowDecoration.CustomizableEdges = customizableEdges8;
             changeImg.Size = new Size(112, 40);
@@ -328,7 +329,7 @@ namespace BookStore.Views.Forms
             guna2CirclePictureBox1.FillColor = Color.Gray;
             guna2CirclePictureBox1.ImageRotate = 0F;
             guna2CirclePictureBox1.InitialImage = Properties.Resources.plus;
-            guna2CirclePictureBox1.Location = new Point(601, 51);
+            guna2CirclePictureBox1.Location = new Point(651, 65);
             guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges9;
             guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -349,10 +350,10 @@ namespace BookStore.Views.Forms
             comboRole.ForeColor = Color.FromArgb(68, 88, 112);
             comboRole.ItemHeight = 30;
             comboRole.Items.AddRange(new object[] { "Nhân viên", "Quản lý" });
-            comboRole.Location = new Point(124, 372);
+            comboRole.Location = new Point(152, 372);
             comboRole.Name = "comboRole";
             comboRole.ShadowDecoration.CustomizableEdges = customizableEdges11;
-            comboRole.Size = new Size(190, 36);
+            comboRole.Size = new Size(208, 36);
             comboRole.StartIndex = 0;
             comboRole.TabIndex = 46;
             // 
@@ -362,7 +363,7 @@ namespace BookStore.Views.Forms
             label9.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             label9.Location = new Point(22, 380);
             label9.Name = "label9";
-            label9.Size = new Size(57, 18);
+            label9.Size = new Size(73, 23);
             label9.TabIndex = 45;
             label9.Text = "Vai trò:";
             // 
@@ -378,7 +379,7 @@ namespace BookStore.Views.Forms
             inpPass.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             inpPass.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             inpPass.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            inpPass.Location = new Point(404, 334);
+            inpPass.Location = new Point(465, 334);
             inpPass.Margin = new Padding(4);
             inpPass.Name = "inpPass";
             inpPass.Padding = new Padding(10);
@@ -386,7 +387,7 @@ namespace BookStore.Views.Forms
             inpPass.PlaceholderText = "";
             inpPass.SelectedText = "";
             inpPass.ShadowDecoration.CustomizableEdges = customizableEdges13;
-            inpPass.Size = new Size(137, 31);
+            inpPass.Size = new Size(158, 31);
             inpPass.TabIndex = 44;
             inpPass.UseSystemPasswordChar = true;
             // 
@@ -394,9 +395,9 @@ namespace BookStore.Views.Forms
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            label8.Location = new Point(321, 341);
+            label8.Location = new Point(361, 341);
             label8.Name = "label8";
-            label8.Size = new Size(75, 18);
+            label8.Size = new Size(97, 23);
             label8.TabIndex = 43;
             label8.Text = "Mật khẩu:";
             // 
@@ -411,7 +412,7 @@ namespace BookStore.Views.Forms
             inpUserName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             inpUserName.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             inpUserName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            inpUserName.Location = new Point(124, 334);
+            inpUserName.Location = new Point(152, 334);
             inpUserName.Margin = new Padding(4);
             inpUserName.Name = "inpUserName";
             inpUserName.Padding = new Padding(10);
@@ -419,7 +420,7 @@ namespace BookStore.Views.Forms
             inpUserName.PlaceholderText = "";
             inpUserName.SelectedText = "";
             inpUserName.ShadowDecoration.CustomizableEdges = customizableEdges15;
-            inpUserName.Size = new Size(190, 31);
+            inpUserName.Size = new Size(208, 31);
             inpUserName.TabIndex = 42;
             // 
             // label7
@@ -428,7 +429,7 @@ namespace BookStore.Views.Forms
             label7.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             label7.Location = new Point(22, 341);
             label7.Name = "label7";
-            label7.Size = new Size(87, 18);
+            label7.Size = new Size(108, 23);
             label7.TabIndex = 41;
             label7.Text = "UserName:";
             // 
@@ -440,11 +441,10 @@ namespace BookStore.Views.Forms
             inpAddress.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             inpAddress.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             inpAddress.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            inpAddress.Enabled = false;
             inpAddress.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             inpAddress.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             inpAddress.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            inpAddress.Location = new Point(124, 295);
+            inpAddress.Location = new Point(152, 295);
             inpAddress.Margin = new Padding(4);
             inpAddress.Name = "inpAddress";
             inpAddress.Padding = new Padding(10);
@@ -452,7 +452,7 @@ namespace BookStore.Views.Forms
             inpAddress.PlaceholderText = "";
             inpAddress.SelectedText = "";
             inpAddress.ShadowDecoration.CustomizableEdges = customizableEdges17;
-            inpAddress.Size = new Size(417, 31);
+            inpAddress.Size = new Size(471, 31);
             inpAddress.TabIndex = 40;
             // 
             // label6
@@ -461,7 +461,7 @@ namespace BookStore.Views.Forms
             label6.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             label6.Location = new Point(22, 302);
             label6.Name = "label6";
-            label6.Size = new Size(61, 18);
+            label6.Size = new Size(75, 23);
             label6.TabIndex = 39;
             label6.Text = "Địa chỉ:";
             // 
@@ -476,7 +476,7 @@ namespace BookStore.Views.Forms
             inpPhone.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             inpPhone.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             inpPhone.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            inpPhone.Location = new Point(124, 178);
+            inpPhone.Location = new Point(152, 178);
             inpPhone.Margin = new Padding(4);
             inpPhone.Name = "inpPhone";
             inpPhone.Padding = new Padding(10);
@@ -484,7 +484,7 @@ namespace BookStore.Views.Forms
             inpPhone.PlaceholderText = "";
             inpPhone.SelectedText = "";
             inpPhone.ShadowDecoration.CustomizableEdges = customizableEdges19;
-            inpPhone.Size = new Size(417, 31);
+            inpPhone.Size = new Size(471, 31);
             inpPhone.TabIndex = 38;
             // 
             // label5
@@ -493,7 +493,7 @@ namespace BookStore.Views.Forms
             label5.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             label5.Location = new Point(22, 185);
             label5.Name = "label5";
-            label5.Size = new Size(104, 18);
+            label5.Size = new Size(130, 23);
             label5.TabIndex = 37;
             label5.Text = "Số điện thoại:";
             // 
@@ -506,12 +506,12 @@ namespace BookStore.Views.Forms
             DateOld.FocusedColor = Color.FromArgb(224, 224, 224);
             DateOld.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             DateOld.Format = DateTimePickerFormat.Short;
-            DateOld.Location = new Point(376, 135);
+            DateOld.Location = new Point(425, 135);
             DateOld.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             DateOld.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             DateOld.Name = "DateOld";
             DateOld.ShadowDecoration.CustomizableEdges = customizableEdges21;
-            DateOld.Size = new Size(165, 36);
+            DateOld.Size = new Size(198, 36);
             DateOld.TabIndex = 36;
             DateOld.Value = new DateTime(2024, 11, 25, 0, 48, 58, 876);
             // 
@@ -519,9 +519,9 @@ namespace BookStore.Views.Forms
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            label4.Location = new Point(294, 143);
+            label4.Location = new Point(323, 143);
             label4.Name = "label4";
-            label4.Size = new Size(80, 18);
+            label4.Size = new Size(101, 23);
             label4.TabIndex = 35;
             label4.Text = "Ngày sinh:";
             // 
@@ -537,10 +537,10 @@ namespace BookStore.Views.Forms
             ComboBoxSex.ForeColor = Color.FromArgb(68, 88, 112);
             ComboBoxSex.ItemHeight = 30;
             ComboBoxSex.Items.AddRange(new object[] { "Nam", "Nữ", "Khác" });
-            ComboBoxSex.Location = new Point(124, 135);
+            ComboBoxSex.Location = new Point(152, 135);
             ComboBoxSex.Name = "ComboBoxSex";
             ComboBoxSex.ShadowDecoration.CustomizableEdges = customizableEdges23;
-            ComboBoxSex.Size = new Size(164, 36);
+            ComboBoxSex.Size = new Size(165, 36);
             ComboBoxSex.StartIndex = 0;
             ComboBoxSex.TabIndex = 34;
             // 
@@ -550,7 +550,7 @@ namespace BookStore.Views.Forms
             label3.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             label3.Location = new Point(22, 143);
             label3.Name = "label3";
-            label3.Size = new Size(67, 18);
+            label3.Size = new Size(86, 23);
             label3.TabIndex = 33;
             label3.Text = "giới tính:";
             // 
@@ -565,7 +565,7 @@ namespace BookStore.Views.Forms
             inpLastName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             inpLastName.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             inpLastName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            inpLastName.Location = new Point(124, 97);
+            inpLastName.Location = new Point(152, 97);
             inpLastName.Margin = new Padding(4);
             inpLastName.Name = "inpLastName";
             inpLastName.Padding = new Padding(10);
@@ -573,7 +573,7 @@ namespace BookStore.Views.Forms
             inpLastName.PlaceholderText = "";
             inpLastName.SelectedText = "";
             inpLastName.ShadowDecoration.CustomizableEdges = customizableEdges25;
-            inpLastName.Size = new Size(417, 31);
+            inpLastName.Size = new Size(471, 31);
             inpLastName.TabIndex = 32;
             // 
             // label2
@@ -582,7 +582,7 @@ namespace BookStore.Views.Forms
             label2.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             label2.Location = new Point(22, 104);
             label2.Name = "label2";
-            label2.Size = new Size(107, 18);
+            label2.Size = new Size(136, 23);
             label2.TabIndex = 31;
             label2.Text = "Tên nhân viên:";
             // 
@@ -598,7 +598,7 @@ namespace BookStore.Views.Forms
             id.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             id.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             id.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            id.Location = new Point(124, 19);
+            id.Location = new Point(152, 19);
             id.Margin = new Padding(4);
             id.Name = "id";
             id.Padding = new Padding(10);
@@ -606,7 +606,7 @@ namespace BookStore.Views.Forms
             id.PlaceholderText = "Tự động tạo";
             id.SelectedText = "";
             id.ShadowDecoration.CustomizableEdges = customizableEdges27;
-            id.Size = new Size(417, 31);
+            id.Size = new Size(471, 31);
             id.TabIndex = 30;
             // 
             // label1
@@ -615,7 +615,7 @@ namespace BookStore.Views.Forms
             label1.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             label1.Location = new Point(22, 26);
             label1.Name = "label1";
-            label1.Size = new Size(103, 18);
+            label1.Size = new Size(131, 23);
             label1.TabIndex = 29;
             label1.Text = "Mã nhân viên:";
             // 
@@ -630,7 +630,7 @@ namespace BookStore.Views.Forms
             inpSalary.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             inpSalary.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             inpSalary.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            inpSalary.Location = new Point(124, 217);
+            inpSalary.Location = new Point(152, 217);
             inpSalary.Margin = new Padding(4);
             inpSalary.Name = "inpSalary";
             inpSalary.Padding = new Padding(10);
@@ -638,7 +638,7 @@ namespace BookStore.Views.Forms
             inpSalary.PlaceholderText = "";
             inpSalary.SelectedText = "";
             inpSalary.ShadowDecoration.CustomizableEdges = customizableEdges29;
-            inpSalary.Size = new Size(417, 31);
+            inpSalary.Size = new Size(471, 31);
             inpSalary.TabIndex = 56;
             // 
             // label10
@@ -647,13 +647,13 @@ namespace BookStore.Views.Forms
             label10.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             label10.Location = new Point(22, 224);
             label10.Name = "label10";
-            label10.Size = new Size(60, 18);
+            label10.Size = new Size(74, 23);
             label10.TabIndex = 55;
             label10.Text = "Lương:";
             // 
             // FormInfoEmp
             // 
-            ClientSize = new Size(835, 465);
+            ClientSize = new Size(924, 499);
             Controls.Add(inpSalary);
             Controls.Add(label10);
             Controls.Add(inpEmail);
@@ -782,16 +782,25 @@ namespace BookStore.Views.Forms
         
         public ItemEmp getItem()
         {
+            // Kiểm tra nếu thông tin employee hoặc các trường cần thiết là null hoặc không hợp lệ
+            if (employee == null)
+            {
+                // Trường hợp employee không tồn tại
+                throw new InvalidOperationException("Employee data is not available.");
+            }
+
+            // Nếu tất cả kiểm tra hợp lệ, tạo và trả về ItemEmp
             return new ItemEmp
             {
                 Id = employee.Id,
-                Name = employee.first_Name+" "+employee.last_Name,
-                Address = employee.Address.line,
+                Name = employee.first_Name + " " + employee.last_Name,
+                Address = employee.Address?.line, // Nếu Address là null, sẽ không xảy ra lỗi
                 Phone = employee.phone,
                 Salary = employee.salary,
                 Role = employee.role,
             };
         }
+
 
         public void setID(int ID)
         {
@@ -805,9 +814,97 @@ namespace BookStore.Views.Forms
             return inpPass.Text;
         }
 
+        private bool ValidateForm()
+        {
+            // Kiểm tra Email
+            if (string.IsNullOrWhiteSpace(inpEmail.Text))
+            {
+                MessageBox.Show("Email không được để trống.", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (!Regex.IsMatch(inpEmail.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            {
+                MessageBox.Show("Định dạng email không hợp lệ.", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Kiểm tra Tên và Họ
+            if (string.IsNullOrWhiteSpace(inpFirstName.Text) || string.IsNullOrWhiteSpace(inpLastName.Text))
+            {
+                MessageBox.Show("Tên và họ không được để trống.", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Kiểm tra Số điện thoại
+            if (string.IsNullOrWhiteSpace(inpPhone.Text))
+            {
+                MessageBox.Show("Số điện thoại không được để trống.", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (!Regex.IsMatch(inpPhone.Text, @"^\+?[1-9]\d{1,14}$"))
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ.", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+
+            // Kiểm tra Tên người dùng
+            if (string.IsNullOrWhiteSpace(inpUserName.Text))
+            {
+                MessageBox.Show("Tên người dùng không được để trống.", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (inpUserName.Text.Length < 3 || inpUserName.Text.Length > 50)
+            {
+                MessageBox.Show("Tên người dùng phải có độ dài từ 3 đến 50 ký tự.", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Kiểm tra Lương
+            if (string.IsNullOrWhiteSpace(inpSalary.Text))
+            {
+                MessageBox.Show("Lương không được để trống.", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+
+            // Kiểm tra Ngày sinh
+            if (DateOld.Value > DateTime.Now)
+            {
+                MessageBox.Show("Ngày sinh không thể trong tương lai.", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Kiểm tra Giới tính
+            if (ComboBoxSex.SelectedIndex == -1)
+            {
+                MessageBox.Show("Giới tính không được để trống.", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Kiểm tra Vai trò
+            if (comboRole.SelectedIndex == -1)
+            {
+                MessageBox.Show("Vai trò không được để trống.", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Nếu tất cả điều kiện đều hợp lệ
+            return true;
+        }
+
+
         private void guna2Button2_Click(object sender, EventArgs e)
         {
+            if(isUpdate)
+            {
+                if (!ValidateForm())
+                {
+                    return;
+                }
+            }
             controller.SaveUser();
+            
         }
         public void SetProfilePicture(string imagePath)
         {

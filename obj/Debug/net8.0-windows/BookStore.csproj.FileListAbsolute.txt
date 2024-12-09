@@ -33,10 +33,12 @@ E:\projcetAppC#\BookStore\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\Syst
 E:\projcetAppC#\BookStore\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
 E:\projcetAppC#\BookStore\bin\Debug\net8.0-windows\runtimes\win\lib\net7.0\System.Management.dll
 E:\projcetAppC#\BookStore\obj\Debug\net8.0-windows\BookStore.csproj.AssemblyReference.cache
-E:\projcetAppC#\BookStore\obj\Debug\net8.0-windows\BookStore.Form1.resources
+E:\projcetAppC#\BookStore\obj\Debug\net8.0-windows\BookStore.NhanVien.resources
 E:\projcetAppC#\BookStore\obj\Debug\net8.0-windows\BookStore.Properties.Resources.resources
+E:\projcetAppC#\BookStore\obj\Debug\net8.0-windows\BookStore.QuanLy.resources
 E:\projcetAppC#\BookStore\obj\Debug\net8.0-windows\BookStore.Test.Form2.resources
 E:\projcetAppC#\BookStore\obj\Debug\net8.0-windows\BookStore.Test.TestForm.resources
+E:\projcetAppC#\BookStore\obj\Debug\net8.0-windows\BookStore.Utilities.BaseMaterialForm.resources
 E:\projcetAppC#\BookStore\obj\Debug\net8.0-windows\BookStore.Views.Forms.createOrders.resources
 E:\projcetAppC#\BookStore\obj\Debug\net8.0-windows\BookStore.Views.Forms.CreateRstock.resources
 E:\projcetAppC#\BookStore\obj\Debug\net8.0-windows\BookStore.Views.Forms.eplManagement.resources
@@ -44,6 +46,9 @@ E:\projcetAppC#\BookStore\obj\Debug\net8.0-windows\BookStore.Views.Forms.FormInf
 E:\projcetAppC#\BookStore\obj\Debug\net8.0-windows\BookStore.Views.Forms.infoEmployee.resources
 E:\projcetAppC#\BookStore\obj\Debug\net8.0-windows\BookStore.Views.Forms.ListOrder.resources
 E:\projcetAppC#\BookStore\obj\Debug\net8.0-windows\BookStore.Views.Forms.ListRestock.resources
+E:\projcetAppC#\BookStore\obj\Debug\net8.0-windows\BookStore.Views.Forms.LoginForm.resources
+E:\projcetAppC#\BookStore\obj\Debug\net8.0-windows\BookStore.Views.Forms.productView.resources
+E:\projcetAppC#\BookStore\obj\Debug\net8.0-windows\BookStore.Views.Forms.Reports.resources
 E:\projcetAppC#\BookStore\obj\Debug\net8.0-windows\BookStore.Views.UserControls.CreateOrder.resources
 E:\projcetAppC#\BookStore\obj\Debug\net8.0-windows\BookStore.Views.UserControls.ItemProductOrder.resources
 E:\projcetAppC#\BookStore\obj\Debug\net8.0-windows\BookStore.Views.UserControls.ListProduct.resources

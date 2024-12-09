@@ -5,6 +5,7 @@ using BookStore.Utilities;
 using BookStore.Views.UserControls;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -23,6 +24,23 @@ namespace BookStore.Controllers
         public void setEnListImg(String urlImg)
         {
             _product.ListUrl.Enqueue(urlImg);
+        }
+
+        public ProductViewModel getItem()
+        {
+            if (_product.ProductID != 0)
+            {
+                return new ProductViewModel
+                {
+                    UrlImg = _product.ListUrl.Count > 0 ? _product.ListUrl.Peek() : string.Empty, // Lấy URL đầu tiên trong queue
+                    
+                    ProductID = _product.ProductID,
+                    Name = _product.Name,
+                    Price = _product.Price,
+                    StockLevel = _product.StockLevel ?? 0,
+                    CategoryName = _product.CategoryName
+                }; 
+            }return null;
         }
         public UpdateProductController(UpdateProduct view)
         {
@@ -120,28 +138,66 @@ namespace BookStore.Controllers
         public void click_updateProdcut()
         {
             if(_view.isUpdate)
-            {
+            {       
+                bool isOK = false;
+                _product.Name = _view.GetProductName();
+                _product.Price = _view.getPrice();
+                //_product.StockLevel = _view.getStock();
+                _product.CategoryName = _view.GetCategory();
+                _product.Price = _view.getPrice();
+                _product.description = _view.GetDescription();
+
                 if(_view.isNew)
                 {
+                    int? id = ProductDAO.AddProduct(_product);
+                    if (id != null)
+                    {
+                        _product.ProductID = id.Value;
+                        _product.updateDate = DateTime.Now;
+                        _product.createDate = DateTime.Now;
+                        _view.SetProductId(_product.ProductID.ToString());
+                        _view.SetCreateDate(_product.createDate);
+                        _view.SetYearUpdate(_product.updateDate);
+                        _view.isNew = false;
+                        isOK = true;
+                    }
 
                 }
                 else
-                {
-                    _product.Name = _view.GetProductName();
-                    _product.Price = _view.getPrice();
-                    _product.StockLevel = _view.getStock();
-                    _product.CategoryName = _view.GetCategory();
-                    _product.Price = _view.getPrice();
-                    _product.description = _view.GetDescription();
-                    if (_product.CategoryName != "Sách")
+                { 
+                    DateTime? dateTime ;
+                    bool isUpdateProductDone = ProductDAO.UpdateProductDetails(_product , out dateTime);
+
+                    if (dateTime != null)
                     {
-                        _product.updateDate = ProductDAO.UpdateProductDetails(_product);
+                        _product.updateDate = dateTime.Value;
                         _view.SetYearUpdate(_product.updateDate);
                     }
-                    else
-                    {
 
+                    if (!isUpdateProductDone)
+                    {
+                        MessageBox.Show($"Chưa cập nhật được sản phẩm");
+                    }else isOK = true;
+                }
+                if (_product.CategoryName == "Sách")
+                {
+                    _book.ISBN = _view.GetISBN();
+                    _book.Publisher = _view.GetPublisher();
+                    _book.PublishingYear = _view.GetPublicYear();
+                    _book.PageCount = _view.GetPageCount();
+                    _book.Authors = ConvertDataTableToList(_view.authorsTable);
+                    bool isUpdateBookDone = ProductDAO.UpdateBookInfo(_product.ProductID,_book);
+                    if(!isUpdateBookDone)
+                    {
+                        MessageBox.Show($"Chưa cập nhật được thông tin sách sản phẩm");
+                        isOK = false;
                     }
+                }
+                if (isOK)
+                {
+                    _view.isUpdate = false;
+                    _view.setEndUpdate();
+                    MessageBox.Show($"Lưu sản phẩm thành công");
                 }
             }else
             {
@@ -149,6 +205,24 @@ namespace BookStore.Controllers
                 _view.setIsUpdate();
             }
 
+        }
+
+        public List<BookAuthor> ConvertDataTableToList(DataTable dataTable)
+        {
+            List<BookAuthor> authors = new List<BookAuthor>();
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                BookAuthor author = new BookAuthor
+                {
+                    NameAuthor = row[0].ToString(),
+                    Role = row[1].ToString()
+                };
+
+                authors.Add(author);
+            }
+
+            return authors;
         }
     }
 }

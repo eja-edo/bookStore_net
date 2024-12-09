@@ -30,7 +30,7 @@ namespace BookStore.Utilities
             else
             {
                 // Handle parsing errors.  Throw an exception or return a default value.
-                throw new FormatException("Invalid price format.");  // Or return 0M;
+                return 0;  // Or return 0M;
             }
         }
     }
