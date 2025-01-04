@@ -30,6 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLy));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             imageList1 = new ImageList(components);
             menu = new MaterialSkin.Controls.MaterialTabControl();
             Employee = new TabPage();
@@ -42,12 +43,14 @@
             listRestock1 = new Views.Forms.ListRestock();
             report = new TabPage();
             reports1 = new Views.Forms.Reports();
+            guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             menu.SuspendLayout();
             Employee.SuspendLayout();
             Product.SuspendLayout();
             bill.SuspendLayout();
             wareHouse.SuspendLayout();
             report.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).BeginInit();
             SuspendLayout();
             // 
             // imageList1
@@ -73,13 +76,13 @@
             menu.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 163);
             menu.ForeColor = Color.FromArgb(222, 0, 0, 0);
             menu.ImageList = imageList1;
-            menu.Location = new Point(0, 85);
+            menu.Location = new Point(0, 72);
             menu.Margin = new Padding(3, 4, 3, 4);
             menu.MouseState = MaterialSkin.MouseState.HOVER;
             menu.Multiline = true;
             menu.Name = "menu";
             menu.SelectedIndex = 0;
-            menu.Size = new Size(1238, 600);
+            menu.Size = new Size(1238, 613);
             menu.TabIndex = 2;
             menu.SelectedIndexChanged += materialTabControl1_SelectedIndexChanged;
             // 
@@ -92,7 +95,7 @@
             Employee.Margin = new Padding(3, 4, 3, 4);
             Employee.Name = "Employee";
             Employee.Padding = new Padding(3, 4, 3, 4);
-            Employee.Size = new Size(1230, 557);
+            Employee.Size = new Size(1230, 570);
             Employee.TabIndex = 0;
             Employee.Text = "Nhân viên";
             // 
@@ -102,7 +105,7 @@
             eplManagement1.Location = new Point(3, 4);
             eplManagement1.Margin = new Padding(3, 4, 3, 4);
             eplManagement1.Name = "eplManagement1";
-            eplManagement1.Size = new Size(1224, 549);
+            eplManagement1.Size = new Size(1224, 562);
             eplManagement1.TabIndex = 0;
             // 
             // Product
@@ -173,10 +176,10 @@
             report.BackColor = Color.FromArgb(242, 242, 242);
             report.Controls.Add(reports1);
             report.ImageKey = "report.png";
-            report.Location = new Point(4, 39);
+            report.Location = new Point(4, 73);
             report.Margin = new Padding(3, 4, 3, 4);
             report.Name = "report";
-            report.Size = new Size(1230, 557);
+            report.Size = new Size(192, 23);
             report.TabIndex = 4;
             report.Text = "Báo cáo";
             // 
@@ -185,20 +188,38 @@
             reports1.Dock = DockStyle.Fill;
             reports1.Location = new Point(0, 0);
             reports1.Name = "reports1";
-            reports1.Size = new Size(1230, 557);
+            reports1.Size = new Size(192, 23);
             reports1.TabIndex = 0;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            guna2CirclePictureBox1.BackColor = Color.Transparent;
+            guna2CirclePictureBox1.FillColor = Color.Transparent;
+            guna2CirclePictureBox1.Image = Properties.Resources.user_interface;
+            guna2CirclePictureBox1.ImageRotate = 0F;
+            guna2CirclePictureBox1.Location = new Point(1172, 33);
+            guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges1;
+            guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            guna2CirclePictureBox1.Size = new Size(32, 32);
+            guna2CirclePictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            guna2CirclePictureBox1.TabIndex = 3;
+            guna2CirclePictureBox1.TabStop = false;
+            guna2CirclePictureBox1.Click += guna2CirclePictureBox1_Click;
             // 
             // QuanLy
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1241, 688);
+            Controls.Add(guna2CirclePictureBox1);
             Controls.Add(menu);
             DrawerShowIconsWhenHidden = true;
             DrawerTabControl = menu;
+            FormStyle = FormStyles.ActionBar_48;
             Margin = new Padding(3, 4, 3, 4);
             Name = "QuanLy";
-            Padding = new Padding(0, 85, 3, 3);
+            Padding = new Padding(0, 72, 3, 3);
             Text = "DALL STORE";
             Load += Form1_Load;
             menu.ResumeLayout(false);
@@ -207,6 +228,7 @@
             bill.ResumeLayout(false);
             wareHouse.ResumeLayout(false);
             report.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -223,5 +245,6 @@
         private Views.Forms.ListOrder listOrder1;
         private Views.Forms.ListRestock listRestock1;
         private Views.Forms.Reports reports1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
     }
 }

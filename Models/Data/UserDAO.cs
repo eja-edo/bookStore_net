@@ -103,6 +103,7 @@ namespace BookStore.Models.Data
                                     UserId = Convert.ToInt32(reader["UserId"]),
                                     Username = reader["Username"].ToString(),
                                     FirstName = reader["FirstName"].ToString(),
+                                    UrlImg = reader["UrlImage"].ToString(),
                                     LastName = reader["LastName"].ToString(),
                                     Email = reader["Email"].ToString(),
                                     old = Convert.ToDateTime(reader["Old"]),

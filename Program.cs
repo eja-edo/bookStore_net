@@ -24,35 +24,54 @@ namespace BookStore
 
             // Khởi tạo LoginForm và chạy nó
             //LoginForm loginForm = new LoginForm();
-            Application.Run(new LoginForm()); // Chạy LoginForm thay vì QuanLy
+            Application.Run(new LoginForm());
         }
 
         // Lưu trữ các form đang mở
         private static List<Form> openForms = new List<Form>();
 
         // Hàm xử lý khi CurrentUser.Current thay đổi
-        private static void OnUserChanged(User newUser)
+        private static void OnUserChanged(User? newUser)
         {
-            // Lấy form LoginForm hiện tại
-            LoginForm loginForm = Application.OpenForms["LoginForm"] as LoginForm;
-            if (loginForm != null)
+            if (newUser == null)
             {
-                loginForm.Hide(); // Ẩn LoginForm thay vì đóng
+                // Đóng tất cả các form đang mở
+                foreach (var form in openForms)
+                {
+                    form.Close(); // Đóng form
+                }
+                openForms.Clear(); // Xóa danh sách các form đã đóng
+
+                Application.Restart();
             }
-            MessageBox.Show(CurrentUser.Current.Role);
-            if (CurrentUser.Current.Role == "Quản lý" || CurrentUser.Current.Role == "Admin")
+            else
             {
-                var homePage = new QuanLy(); // Trang chủ sau khi đăng nhập
-                homePage.Show(); // Hiển thị trang chủ
-                openForms.Add(homePage);
-            }
-            else if(CurrentUser.Current.Role == "Nhân viên")
-            {
-                var homePage = new NhanVien(); // Trang chủ sau khi đăng nhập
-                homePage.Show(); // Hiển thị trang chủ
-                openForms.Add(homePage);
+                // Lấy form LoginForm hiện tại và ẩn nó
+                LoginForm loginForm = Application.OpenForms["LoginForm"] as LoginForm;
+                if (loginForm != null)
+                {
+                    loginForm.Hide(); // Ẩn LoginForm thay vì đóng
+                }
+
+                MessageBox.Show(CurrentUser.Current.Role);
+
+                // Kiểm tra quyền người dùng và hiển thị trang chủ phù hợp
+                if (CurrentUser.Current.Role == "Quản lý" || CurrentUser.Current.Role == "Admin")
+                {
+                    var homePage = new QuanLy(); // Trang chủ cho quản lý/admin
+                    homePage.Show(); // Hiển thị trang chủ
+                    openForms.Add(homePage); // Thêm form vào danh sách các form đang mở
+                }
+                else if (CurrentUser.Current.Role == "Nhân viên")
+                {
+                    var homePage = new NhanVien(); // Trang chủ cho nhân viên
+                    homePage.Show(); // Hiển thị trang chủ
+                    openForms.Add(homePage); // Thêm form vào danh sách các form đang mở
+                }
             }
         }
+
+
 
         // Mở form trang chủ
         private static void OpenHomePage()

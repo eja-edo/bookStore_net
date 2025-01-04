@@ -1449,7 +1449,7 @@ END;
 
 --EXEC GetPasswordByUserInfo @Identifier = 'duyanh';
 go
-Create PROCEDURE GetUserByIdentifier
+create PROCEDURE GetUserByIdentifier
     @Identifier NVARCHAR(100), -- Có thể là username, phone hoặc email
     @Password VARCHAR(255),     -- Mật khẩu từ người dùng nhập vào
 	@Salt VARCHAR(255)
@@ -1460,6 +1460,7 @@ BEGIN
         user_id AS UserId,
         username AS Username,
         first_name AS FirstName,
+		urlImg as UrlImage,
         last_name AS LastName,
         email AS Email,
         old AS Old,
@@ -1517,3 +1518,53 @@ BEGIN
 END;
 
 --EXEC GetTop10BestSellingProducts;
+go
+CREATE PROCEDURE GetBestSellingProducts
+    @TimeRange NVARCHAR(50) -- Khoảng thời gian: 'WEEK', 'MONTH', 'YEAR'
+AS
+BEGIN
+    -- Tạo biến lưu ngày bắt đầu và ngày kết thúc
+    DECLARE @StartDate DATETIME;
+    DECLARE @EndDate DATETIME;
+
+    -- Xác định phạm vi thời gian theo tham số @TimeRange
+    IF @TimeRange = 'WEEK'
+    BEGIN
+        -- Lấy tuần hiện tại
+        SET @StartDate = DATEADD(DAY, 1 - DATEPART(WEEKDAY, GETDATE()), CAST(GETDATE() AS DATE)); -- Bắt đầu tuần
+        SET @EndDate = DATEADD(DAY, 7 - DATEPART(WEEKDAY, GETDATE()), CAST(GETDATE() AS DATE)); -- Kết thúc tuần
+    END
+    ELSE IF @TimeRange = 'MONTH'
+    BEGIN
+        -- Lấy tháng hiện tại
+        SET @StartDate = DATEADD(DAY, 1 - DAY(GETDATE()), CAST(GETDATE() AS DATE)); -- Ngày đầu tháng
+        SET @EndDate = EOMONTH(GETDATE()); -- Ngày cuối tháng
+    END
+    ELSE IF @TimeRange = 'YEAR'
+    BEGIN
+        -- Lấy năm hiện tại
+        SET @StartDate = DATEFROMPARTS(YEAR(GETDATE()), 1, 1); -- Ngày đầu năm
+        SET @EndDate = DATEFROMPARTS(YEAR(GETDATE()), 12, 31); -- Ngày cuối năm
+    END
+    ELSE
+    BEGIN
+        -- Nếu tham số không hợp lệ, thông báo lỗi và thoát
+        PRINT 'Invalid TimeRange value. Please use "WEEK", "MONTH", or "YEAR".';
+        RETURN;
+    END
+
+    -- Truy vấn lấy sản phẩm bán chạy nhất
+    SELECT TOP 10 
+        p.Name AS ProductName,
+        SUM(oi.Quantity) AS TotalQuantitySold
+    FROM OrderItems oi
+    INNER JOIN Products p ON oi.ProductID = p.ProductID
+    INNER JOIN Orders o ON oi.OrderID = o.OrderID
+    WHERE 
+        o.OrderDate >= @StartDate -- Lọc từ ngày bắt đầu
+        AND o.OrderDate <= @EndDate -- Đến ngày kết thúc
+    GROUP BY p.Name
+    ORDER BY TotalQuantitySold DESC;
+END;
+
+EXEC GetBestSellingProducts 'WEEK';

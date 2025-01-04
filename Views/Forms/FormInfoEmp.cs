@@ -309,17 +309,18 @@ namespace BookStore.Views.Forms
             // 
             // changeImg
             // 
+            changeImg.BackColor = Color.Transparent;
             changeImg.CustomizableEdges = customizableEdges7;
             changeImg.DisabledState.BorderColor = Color.DarkGray;
             changeImg.DisabledState.CustomBorderColor = Color.DarkGray;
             changeImg.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             changeImg.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            changeImg.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            changeImg.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 163);
             changeImg.ForeColor = Color.White;
-            changeImg.Location = new Point(750, 231);
+            changeImg.Location = new Point(749, 231);
             changeImg.Name = "changeImg";
             changeImg.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            changeImg.Size = new Size(112, 40);
+            changeImg.Size = new Size(127, 45);
             changeImg.TabIndex = 48;
             changeImg.Text = "Thay đổi ảnh";
             changeImg.Click += guna2Button1_Click;

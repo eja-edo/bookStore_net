@@ -3,8 +3,84 @@
   "WorkspaceRootPath": "E:\\projcetAppC#\\BookStore\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\quanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:quanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\usercontrols\\salesreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\usercontrols\\salesreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\forms\\createorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\createorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|E:\\projcetAppC#\\BookStore\\views\\forms\\createorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\createorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\forms\\eplmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\eplmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|E:\\projcetAppC#\\BookStore\\views\\forms\\eplmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\eplmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|E:\\projcetAppC#\\BookStore\\views\\forms\\forminfoemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\forminfoemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\forms\\forminfoemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\forminfoemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|E:\\projcetAppC#\\BookStore\\views\\usercontrols\\createorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\usercontrols\\createorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|E:\\projcetAppC#\\BookStore\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|E:\\projcetAppC#\\BookStore\\views\\usercontrols\\listproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\usercontrols\\listproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\usercontrols\\listproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\usercontrols\\listproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\forms\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\forms\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\views\\usercontrols\\createorder.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:views\\usercontrols\\createorder.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|E:\\projcetAppC#\\BookStore\\quanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:quanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\utilities\\currentuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:utilities\\currentuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\models\\data\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:models\\data\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|e:\\projcetappc#\\bookstore\\models\\entity\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF24AD8-9184-4202-BA5E-6CFE441A73EF}|BookStore.csproj|solutionrelative:models\\entity\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,16 +106,244 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SalesReport.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\SalesReport.cs",
+              "RelativeDocumentMoniker": "Views\\UserControls\\SalesReport.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\SalesReport.cs",
+              "RelativeToolTip": "Views\\UserControls\\SalesReport.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAIwCwAAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T05:31:19.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "createOrders.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\createOrders.cs",
+              "RelativeDocumentMoniker": "Views\\Forms\\createOrders.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\createOrders.cs",
+              "RelativeToolTip": "Views\\Forms\\createOrders.cs",
+              "ViewState": "AgIAAMcAAAAAAAAAAADwv8kAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T01:29:19.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "createOrders.cs [Design]",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\createOrders.cs",
+              "RelativeDocumentMoniker": "Views\\Forms\\createOrders.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\createOrders.cs [Design]",
+              "RelativeToolTip": "Views\\Forms\\createOrders.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T01:29:11.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "eplManagement.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\eplManagement.cs",
+              "RelativeDocumentMoniker": "Views\\Forms\\eplManagement.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\eplManagement.cs",
+              "RelativeToolTip": "Views\\Forms\\eplManagement.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAgwDMAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T01:24:24.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "eplManagement.cs [Design]",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\eplManagement.cs",
+              "RelativeDocumentMoniker": "Views\\Forms\\eplManagement.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\eplManagement.cs [Design]",
+              "RelativeToolTip": "Views\\Forms\\eplManagement.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T01:24:20.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ListProduct.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\ListProduct.cs",
+              "RelativeDocumentMoniker": "Views\\UserControls\\ListProduct.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\ListProduct.cs",
+              "RelativeToolTip": "Views\\UserControls\\ListProduct.cs",
+              "ViewState": "AgIAALgAAAAAAAAAAAApwMkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T01:07:48.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ListProduct.cs [Design]",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\ListProduct.cs",
+              "RelativeDocumentMoniker": "Views\\UserControls\\ListProduct.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\ListProduct.cs [Design]",
+              "RelativeToolTip": "Views\\UserControls\\ListProduct.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T01:07:30.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CreateOrder.cs [Design]",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\CreateOrder.cs",
+              "RelativeDocumentMoniker": "Views\\UserControls\\CreateOrder.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\CreateOrder.cs [Design]",
+              "RelativeToolTip": "Views\\UserControls\\CreateOrder.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T00:42:46.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CreateOrder.Designer.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\CreateOrder.Designer.cs",
+              "RelativeDocumentMoniker": "Views\\UserControls\\CreateOrder.Designer.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\UserControls\\CreateOrder.Designer.cs",
+              "RelativeToolTip": "Views\\UserControls\\CreateOrder.Designer.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwNMBAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T00:42:37.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "NhanVien.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\NhanVien.cs",
+              "RelativeDocumentMoniker": "NhanVien.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\NhanVien.cs",
+              "RelativeToolTip": "NhanVien.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAIwBUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T00:33:34.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "NhanVien.cs [Design]",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\NhanVien.cs",
+              "RelativeDocumentMoniker": "NhanVien.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\NhanVien.cs [Design]",
+              "RelativeToolTip": "NhanVien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T00:32:31.632Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAqwFwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T23:05:34.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CurrentUser.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Utilities\\CurrentUser.cs",
+              "RelativeDocumentMoniker": "Utilities\\CurrentUser.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Utilities\\CurrentUser.cs",
+              "RelativeToolTip": "Utilities\\CurrentUser.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T23:01:10.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Models\\Entity\\User.cs",
+              "RelativeDocumentMoniker": "Models\\Entity\\User.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Models\\Entity\\User.cs",
+              "RelativeToolTip": "Models\\Entity\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T22:48:06.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UserDAO.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Models\\Data\\UserDAO.cs",
+              "RelativeDocumentMoniker": "Models\\Data\\UserDAO.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Models\\Data\\UserDAO.cs",
+              "RelativeToolTip": "Models\\Data\\UserDAO.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwCwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T22:47:27.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormInfoEmp.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\FormInfoEmp.cs",
+              "RelativeDocumentMoniker": "Views\\Forms\\FormInfoEmp.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\FormInfoEmp.cs",
+              "RelativeToolTip": "Views\\Forms\\FormInfoEmp.cs",
+              "ViewState": "AgIAAJkDAAAAAAAAAAAcwKYDAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T22:45:16.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormInfoEmp.cs [Design]",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\FormInfoEmp.cs",
+              "RelativeDocumentMoniker": "Views\\Forms\\FormInfoEmp.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\FormInfoEmp.cs [Design]",
+              "RelativeToolTip": "Views\\Forms\\FormInfoEmp.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T22:43:34.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "QuanLy.cs",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\QuanLy.cs",
+              "RelativeDocumentMoniker": "QuanLy.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\QuanLy.cs",
+              "RelativeToolTip": "QuanLy.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA6wDUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T22:40:57.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "QuanLy.cs [Design]",
+              "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\QuanLy.cs",
+              "RelativeDocumentMoniker": "QuanLy.cs",
+              "ToolTip": "E:\\projcetAppC#\\BookStore\\QuanLy.cs [Design]",
+              "RelativeToolTip": "QuanLy.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T22:35:11.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Reports.cs",
               "DocumentMoniker": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\Reports.cs",
               "RelativeDocumentMoniker": "Views\\Forms\\Reports.cs",
               "ToolTip": "E:\\projcetAppC#\\BookStore\\Views\\Forms\\Reports.cs",
               "RelativeToolTip": "Views\\Forms\\Reports.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAArwB4AAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwB4AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T22:23:11.581Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T22:23:11.581Z"
             }
           ]
         }

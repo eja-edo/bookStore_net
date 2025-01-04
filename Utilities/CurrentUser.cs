@@ -12,8 +12,8 @@ namespace BookStore.Utilities
         // Định nghĩa sự kiện
         public static event Action<User> UserChanged;
 
-        private static User _current;
-        public static User Current
+        private static User? _current;
+        public static User? Current
         {
             get => _current;
             set

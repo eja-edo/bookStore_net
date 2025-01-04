@@ -34,11 +34,20 @@ namespace BookStore.Views.UserControls
             LoadRevenue(todayRevenue.OrderCount, todayRevenue.TotalRevenue); 
         }
 
-        private void LoadRevenue(int orderCount , Decimal TotalPrice)
+        private void LoadRevenue(int orderCount, decimal TotalPrice)
         {
             labOrderCount.Text = orderCount.ToString();
             labTotalPrice.Text = Format.formatPrice(TotalPrice);
-            labAvgRevegue.Text = Format.formatPrice(TotalPrice/orderCount);
+
+            // Check for divide by zero to avoid exceptions
+            if (orderCount == 0)
+            {
+                labAvgRevegue.Text = "N/A"; // Display an appropriate message for average revenue
+            }
+            else
+            {
+                labAvgRevegue.Text = Format.formatPrice(TotalPrice / orderCount);
+            }
         }
 
 
