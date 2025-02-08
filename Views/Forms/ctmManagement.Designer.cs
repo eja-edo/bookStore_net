@@ -35,9 +35,10 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            STT = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
             CTMID = new DataGridViewTextBoxColumn();
             EplName = new DataGridViewTextBoxColumn();
             PhoneNum = new DataGridViewTextBoxColumn();
@@ -45,11 +46,11 @@
             Date = new DataGridViewTextBoxColumn();
             Address = new DataGridViewTextBoxColumn();
             Score = new DataGridViewTextBoxColumn();
-            Edit = new DataGridViewTextBoxColumn();
             info = new DataGridViewImageColumn();
             delete = new DataGridViewImageColumn();
             label1 = new Label();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -71,6 +72,7 @@
             guna2Button1.Size = new Size(174, 41);
             guna2Button1.TabIndex = 20;
             guna2Button1.Text = "+ Thêm mới";
+            guna2Button1.Click += guna2Button1_Click;
             // 
             // guna2DataGridView1
             // 
@@ -88,7 +90,7 @@
             guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             guna2DataGridView1.ColumnHeadersHeight = 47;
             guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.Columns.AddRange(new DataGridViewColumn[] { STT, CTMID, EplName, PhoneNum, City, Date, Address, Score, Edit, info, delete });
+            guna2DataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, CTMID, EplName, PhoneNum, City, Date, Address, Score, info, delete });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 163);
@@ -130,11 +132,11 @@
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
-            // STT
+            // Column1
             // 
-            STT.HeaderText = "STT";
-            STT.Name = "STT";
-            STT.ReadOnly = true;
+            Column1.HeaderText = "STT";
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
             // 
             // CTMID
             // 
@@ -184,17 +186,12 @@
             Score.Name = "Score";
             Score.ReadOnly = true;
             // 
-            // Edit
-            // 
-            Edit.HeaderText = "Tác Vụ";
-            Edit.Name = "Edit";
-            Edit.ReadOnly = true;
-            // 
             // info
             // 
             info.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             info.FillWeight = 71.06599F;
             info.HeaderText = "";
+            info.Image = Properties.Resources.edit;
             info.MinimumWidth = 6;
             info.Name = "info";
             info.ReadOnly = true;
@@ -207,6 +204,7 @@
             delete.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             delete.FillWeight = 71.0659943F;
             delete.HeaderText = "";
+            delete.Image = Properties.Resources.bin;
             delete.MinimumWidth = 6;
             delete.Name = "delete";
             delete.ReadOnly = true;
@@ -250,16 +248,37 @@
             guna2TextBox1.Size = new Size(341, 36);
             guna2TextBox1.TabIndex = 17;
             // 
+            // guna2CircleButton1
+            // 
+            guna2CircleButton1.BackgroundImage = Properties.Resources.reload;
+            guna2CircleButton1.BackgroundImageLayout = ImageLayout.Stretch;
+            guna2CircleButton1.DisabledState.BorderColor = Color.DarkGray;
+            guna2CircleButton1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2CircleButton1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2CircleButton1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2CircleButton1.FillColor = Color.Transparent;
+            guna2CircleButton1.Font = new Font("Segoe UI", 9F);
+            guna2CircleButton1.ForeColor = Color.White;
+            guna2CircleButton1.Location = new Point(303, 59);
+            guna2CircleButton1.Name = "guna2CircleButton1";
+            guna2CircleButton1.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            guna2CircleButton1.Size = new Size(22, 23);
+            guna2CircleButton1.TabIndex = 21;
+            guna2CircleButton1.Click += guna2CircleButton1_Click;
+            // 
             // ctmManagement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(guna2CircleButton1);
             Controls.Add(guna2Button1);
             Controls.Add(guna2DataGridView1);
             Controls.Add(label1);
             Controls.Add(guna2TextBox1);
             Name = "ctmManagement";
             Size = new Size(976, 557);
+            Load += ctmManagement_Load;
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -271,7 +290,7 @@
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private Label label1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private DataGridViewTextBoxColumn STT;
+        private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn CTMID;
         private DataGridViewTextBoxColumn EplName;
         private DataGridViewTextBoxColumn PhoneNum;
@@ -279,8 +298,8 @@
         private DataGridViewTextBoxColumn Date;
         private DataGridViewTextBoxColumn Address;
         private DataGridViewTextBoxColumn Score;
-        private DataGridViewTextBoxColumn Edit;
         private DataGridViewImageColumn info;
         private DataGridViewImageColumn delete;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
     }
 }

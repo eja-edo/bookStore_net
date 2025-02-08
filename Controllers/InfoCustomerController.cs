@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 
 namespace BookStore.Controllers
 {
-    public class UserController
+    public class InfoCustomerController
     {
         private readonly InfoEmployee model;
         private readonly FormInfoEmp userView;
 
-        public UserController(FormInfoEmp view, InfoEmployee empl)
+        public InfoCustomerController(/*FormInfoCust*/FormInfoEmp view, /*InfoCust*/InfoEmployee cust)
         {
             this.userView = view;
-            model = empl;
+            model = cust;
         }
 
 
@@ -79,10 +79,11 @@ namespace BookStore.Controllers
 
         public void SaveUser()
         {
-            if(userView.isUpdate)
+            if (userView.isUpdate)
             {
                 try
-                {   string errorMessage; // Khai báo biến để nhận thông báo lỗi
+                {
+                    string errorMessage; // Khai báo biến để nhận thông báo lỗi
                     userView.setNotUpdate();
                     // Tạo đối tượng InfoEmployee và gán các giá trị từ giao diện người dùng
                     model.email = userView.GetEmail();
@@ -95,14 +96,14 @@ namespace BookStore.Controllers
                     model.salary = userView.GetSalary();
                     model.role = userView.GetRole();
                     model.sex = userView.GetSex();
-                    model.password = (userView.getPass()=="")?null:userView.getPass(); // Mật khẩu mặc định hoặc có thể tạo mật khẩu động
+                    model.password = (userView.getPass() == "") ? null : userView.getPass(); // Mật khẩu mặc định hoặc có thể tạo mật khẩu động
 
 
                     if (userView.isNew)
                     {
-                        int id ;
+                        int id;
                         // Nếu là người dùng mới, gọi DAO để thêm vào cơ sở dữ liệu
-                        bool result = DetailEmpDAO.InsertUser(model , out id);
+                        bool result = DetailEmpDAO.InsertUser(model, out id);
                         if (result)
                         {
                             MessageBox.Show("User added successfully!");
@@ -116,7 +117,7 @@ namespace BookStore.Controllers
                     }
                     else
                     {
-                    
+
                         bool result = DetailEmpDAO.UpdateUser(model, out errorMessage);
 
                         if (result)
@@ -140,5 +141,6 @@ namespace BookStore.Controllers
                 userView.setUpdate();
             }
         }
+
     }
 }

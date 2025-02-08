@@ -52,8 +52,6 @@ namespace BookStore.Models.Data
             return employees;
         }
 
-
-
         public static bool DeleteUserById(int userId)
         {
             try

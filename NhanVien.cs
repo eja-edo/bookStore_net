@@ -1,4 +1,5 @@
 ﻿using BookStore.Utilities;
+using BookStore.Views.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BookStore
 {
@@ -65,5 +67,13 @@ namespace BookStore
             {
             }
         }
+        /*
+        private void materialTabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (menu.SelectedTab == report) // tabPage1 là tên Tab bạn muốn kiểm tra
+            {
+                reports1.Reports_loadData(); // Hàm tải lại dữ liệu cho tab
+            }
+        }*/
     }
 }
