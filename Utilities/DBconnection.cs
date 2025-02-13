@@ -12,7 +12,7 @@ namespace BookStore.Utilities
         {
             try
             {
-                connectionString = "Server=EDO_EJA\\SQLEXPRESS;Database=bookStoreManager_db;User Id=sa;Password=12345678;TrustServerCertificate=True;"; // Replace "YourConnectionStringName" with the name of your connection string in app.config
+                connectionString = "Server=DESKTOP-FKLCNTQ\\MLANHEM;Database=bookStoreManager_db;User Id=sa;Password=anmisoi12;TrustServerCertificate=True;"; // Replace "YourConnectionStringName" with the name of your connection string in app.config
                 if (connectionString == null)
                 {
                     throw new ConfigurationErrorsException("Connection string not found in app.config");

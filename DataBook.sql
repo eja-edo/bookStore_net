@@ -102,3 +102,37 @@ INSERT INTO Users (username, first_name, last_name, email, sex, Role, password, 
 VALUES 
 ('admin', N'Quản', N'Lý', 'admin@example.com', N'Nam', N'Admin', 'admin123', '0912345678', 30000000, N'1 đường ABC', N'Hà Nội', N'Hà Nội'),
 ('employee1', N'Nguyễn', N'Văn B', 'employee1@example.com', N'Nam', N'Nhân viên', 'password123', '0911123456', 15000000, N'2 đường DEF', N'Hồ Chí Minh', N'Hồ Chí Minh');
+INSERT INTO Users (
+    username, 
+    urlImg,
+    first_name, 
+    last_name, 
+    email, 
+    old, 
+    sex, 
+    Role, 
+    password, 
+    salt, 
+    phone, 
+    Salary, 
+    address_line, 
+    city, 
+    province
+) 
+VALUES (
+    'duyanh', 
+    NULL, 
+    N'Vũ Nguyễn', 
+    N'Duy Anh', 
+    'duyanh@gmail.com', 
+    '2004-10-18 00:00:00.000', 
+    N'Nam', 
+    N'Quản lý', 
+    'EoM/ujEp+4g84vML6eCFLkQPI43zDsFkc3CydTfln/4=', 
+    'lyvWMZFLqnBkqUJ6UT6KTg==', 
+    '868828780', 
+    12000000.00, 
+    NULL, 
+    NULL, 
+    NULL
+);

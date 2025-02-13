@@ -22,8 +22,17 @@
     <Compile Update="Views\Forms\CreateRstock.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Views\Forms\ctmManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\Forms\CustomerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\Forms\eplManagement.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\Forms\FormInfoCust.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\Forms\FormInfoEmp.cs">
       <SubType>Form</SubType>
@@ -48,6 +57,9 @@
     </Compile>
     <Compile Update="Views\MyComponent\buttonOrder.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Views\UserControls\AddCtm.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\UserControls\CreateOrder.cs">
       <SubType>UserControl</SubType>
